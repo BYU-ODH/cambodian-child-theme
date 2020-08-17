@@ -19,4 +19,5 @@ Text Domain: septera
 
 .facetwp-template a:hover {
     color:darkred;
+    text-decoration:none;
 }
