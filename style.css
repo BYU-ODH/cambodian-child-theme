@@ -21,3 +21,12 @@ Text Domain: septera
     color:red;
     text-decoration:none;
 }
+
+.facet-filter {
+    font-size: 100%;
+
+}
+
+.facet-filter th {
+    font-size:120%;
+}
