@@ -27,9 +27,8 @@ Text Domain: septera
 
 .facet-filter {
     font-size: 100%;
-    font-weight: 400;
-    
-
+    font-weight: 200;
+    color:#474747;
 }
 
 .facet-filter th {
