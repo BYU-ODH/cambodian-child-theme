@@ -72,7 +72,7 @@
 	
 					jQuery.fn.dataTable.ext.search.push(
 						function( settings, searchData, index, rowData, counter ) {
-						var birth = jQuery('input:checkbox[name="Birth"]:checked').map(function() {
+						var birth = jQuery('input:checkbox[name=" Birth"]:checked').map(function() {
 							 return this.value;					 
 						}).get();
 	
