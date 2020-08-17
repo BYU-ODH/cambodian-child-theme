@@ -25,15 +25,15 @@ Text Domain: septera
     text-decoration:none;
 }
 
-.facet-filter {
-    font-size: 100%;
+.facet-filter input {
+    font-size:90%;
     font-weight: 200;
     color:#474747;
 }
 
 .facet-filter th {
-    font-size:120%;
-    font-weight:700;
+    font-size:110%;
+    font-weight:400;
 }
 
 #site-title a {
