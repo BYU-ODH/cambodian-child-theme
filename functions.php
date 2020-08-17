@@ -52,7 +52,7 @@
 							);
 					jQuery.fn.dataTable.ext.search.push(
 						function( settings, searchData, index, rowData, counter ) {
-						var gender = jQuery('input:checkbox[name="gender"]:checked').map(function() {
+						var gender = jQuery('input:checkbox[name="gender"]checked').map(function() {
 							 return this.value;					 
 						}).get();
 	
