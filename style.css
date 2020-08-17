@@ -14,10 +14,10 @@ Text Domain: septera
 */
 
 .facetwp-template a {
-  color:red;
+  color:grey;
 }
 
 .facetwp-template a:hover {
-    color:darkred;
+    color:red;
     text-decoration:none;
 }
