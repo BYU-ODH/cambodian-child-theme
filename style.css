@@ -12,21 +12,35 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, grid-layout, custom-background, custom-colors, custom-header, flexible-header, custom-menu, featured-image-header, featured-images, front-page-post-form, full-width-template, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, news, photography, portfolio
 Text Domain: septera
 */
+.facetwp-template {
+    color:#474747;
+  }
 
 .facetwp-template a {
-  color:grey;
+  color:#474747;
 }
 
 .facetwp-template a:hover {
-    color:red;
+    color:#d11710;
     text-decoration:none;
 }
 
 .facet-filter {
     font-size: 100%;
+    font-weight: 400;
+    
 
 }
 
 .facet-filter th {
     font-size:120%;
+    font-weight:700;
+}
+
+#site-title a {
+	color: #d11710;
+}
+
+#site-title a:hover {
+	color: #3a3a3a;
 }
