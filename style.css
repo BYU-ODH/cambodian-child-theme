@@ -16,3 +16,7 @@ Text Domain: septera
 .facetwp-template a {
   color:red;
 }
+
+.facetwp-template a:hover {
+    color:darkred;
+}
