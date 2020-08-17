@@ -16,7 +16,7 @@
 		if (is_page ('280')) { 
 		  ?>  
 		<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-		<script src="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>
+		<!--<script src="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>-->
 			  <script type="text/javascript">
 				
 				jQuery(document).ready(function() {
@@ -243,13 +243,13 @@
 	  }
 	  add_action('wp_head', 'wpb_hook_javascript');
 	
-	  /* radio button and default to unknown 
+	  /* radio button and default to unknown */
 	  if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
 		/**
 		 * Removes and replaces the built-in taxonomy metabox with our radio-select metabox.
 		 * @link  http://codex.wordpress.org/Function_Reference/add_meta_box#Parameters
 		 */
-		/*class WDS_Taxonomy_Radio {
+		class WDS_Taxonomy_Radio {
 	  
 		   // Post types where metabox should be replaced (defaults to all post_types associated with taxonomy)
 		   public $post_types = array();
@@ -274,7 +274,7 @@
 			* @param string $tax_slug      Taxonomy slug
 			* @param array  $post_types    post-types to display custom metabox
 			*/
-		   /*public function __construct( $tax_slug, $post_types = array() ) {
+		   public function __construct( $tax_slug, $post_types = array() ) {
 	  
 			  $this->slug = $tax_slug;
 			  $this->post_types = is_array( $post_types ) ? $post_types : array( $post_types );
@@ -286,7 +286,7 @@
 		   /**
 			* Removes and replaces the built-in taxonomy metabox with our own.
 			*/
-		   /*public function add_radio_box() {
+		   public function add_radio_box() {
 			  foreach ( $this->post_types() as $key => $cpt ) {
 				 // remove default category type metabox
 				 remove_meta_box( $this->slug .'div', $cpt, 'side' );
@@ -300,7 +300,7 @@
 		   /**
 			* Displays our taxonomy radio box metabox
 			*/
-		   /*public function radio_box() {
+		   public function radio_box() {
 	  
 			  // uses same noncename as default box so no save_post hook needed
 			  wp_nonce_field( 'taxonomy_'. $this->slug, 'taxonomy_noncename' );
@@ -350,7 +350,7 @@
 			* Gets the taxonomy object from the slug
 			* @return object Taxonomy object
 			*/
-		   /*public function taxonomy() {
+		   public function taxonomy() {
 			  $this->taxonomy = $this->taxonomy ? $this->taxonomy : get_taxonomy( $this->slug );
 			  return $this->taxonomy;
 		   }
@@ -359,7 +359,7 @@
 			* Gets the taxonomy's associated post_types
 			* @return array Taxonomy's associated post_types
 			*/
-		  /* public function post_types() {
+		   public function post_types() {
 			  $this->post_types = !empty( $this->post_types ) ? $this->post_types : $this->taxonomy()->object_type;
 			  return $this->post_types;
 		   }
@@ -368,7 +368,7 @@
 			* Gets the metabox title from the taxonomy object's labels (or uses the passed in title)
 			* @return string Metabox title
 			*/
-		 /*  public function metabox_title() {
+		   public function metabox_title() {
 			  $this->metabox_title = !empty( $this->metabox_title ) ? $this->metabox_title : $this->taxonomy()->labels->name;
 			  return $this->metabox_title;
 		   }
