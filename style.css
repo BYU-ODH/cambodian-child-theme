@@ -25,7 +25,7 @@ Text Domain: septera
     text-decoration:none;
 }
 
-.facetwp-template input[type='checkbox'] {
+.facet-filter div {
     font-size:90%;
     font-weight: 200;
     color:#474747;
