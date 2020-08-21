@@ -32,8 +32,12 @@ Text Domain: septera
 }
 
 .facet-filter th {
-    font-size:115%;
+    font-size:130%;
     font-weight:400;
+}
+
+.facet-filter {
+  font-size: 100%
 }
 
 #site-title a {
