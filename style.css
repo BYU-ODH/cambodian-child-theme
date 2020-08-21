@@ -25,7 +25,7 @@ Text Domain: septera
     text-decoration:none;
 }
 
-.facet-filter input {
+.facet-filter input[type='checkbox'] {
     font-size:90%;
     font-weight: 200;
     color:#474747;
@@ -33,11 +33,7 @@ Text Domain: septera
 
 .facet-filter th {
     font-size:130%;
-    font-weight:400;
-}
-
-.facet-filter {
-  font-size: 100%
+    font-weight:700;
 }
 
 #site-title a {
