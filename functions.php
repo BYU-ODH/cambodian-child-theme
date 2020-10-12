@@ -13,7 +13,7 @@
     add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 	function wpb_hook_javascript() {
-		if (is_page ('280')) { 
+		if (is_page ('280','10812')) { 
 		  ?>  
 		<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 		<!--<script src="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>-->
