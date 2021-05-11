@@ -12,7 +12,54 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, grid-layout, custom-background, custom-colors, custom-header, flexible-header, custom-menu, featured-image-header, featured-images, front-page-post-form, full-width-template, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, news, photography, portfolio
 Text Domain: septera
 */
+div#site-title span a {
+    color:#d11710;
+}
 
-article.hentry div.container-fluid a{
-    color:blue;
+div#site-title a:hover {
+    color:black;
+}
+
+i.icon-bread-home {
+    color:#d11710;
+}
+
+#access > div > ul > li.menu-search-animated {
+    text-align: left;
+}
+
+.searchform {
+    overflow: visible;
+}
+
+.lp-staticslider .staticslider-caption-text {
+    color: yellow !important;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 5px 5px 8px #000;
+    margin-top: 3.5em;
+}
+
+a.staticslider-button:nth-child(2n+1) {
+    color: #474747;
+    border-color: #FFFDFF;
+    background-color: #FFFDFF;
+}
+
+a.staticslider-button:nth-child(2n+1):hover {
+    color: #FFFDFF;
+    border-color: #FFFDFF;
+    background-color: transparent;
+}
+
+a.staticslider-button:nth-child(2n) {
+    color: #474747 !important;
+    border-color: #FFFDFF;
+    background-color: #FFFDFF;
+}
+
+a.staticslider-button:nth-child(2n):hover {
+    color: #FFFDFF !important;
+    border-color: #FFFDFF;
+    background-color: transparent;
 }
