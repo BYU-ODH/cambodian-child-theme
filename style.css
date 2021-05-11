@@ -13,4 +13,6 @@ Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, grid-
 Text Domain: septera
 */
 
-
+article.hentry div.container-fluid a{
+    color:blue;
+}
