@@ -12,7 +12,7 @@
     }
     add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
-	function wpb_hook_javascript() {
+	function wpb_hook_child() {
 		if (is_page ('280')) { 
 		  ?>  
 		<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -241,7 +241,7 @@
 		  <?php
 		}
 	  }
-	  add_action('wp_head', 'wpb_hook_javascript');
+	  add_action('wp_head', 'wpb_hook_child');
 	  
 /* radio button and default to unknown */
 if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
