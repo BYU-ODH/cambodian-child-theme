@@ -63,3 +63,7 @@ a.staticslider-button:nth-child(2n):hover {
     border-color: #FFFDFF;
     background-color: transparent;
 }
+
+div#footer-inside a {
+    color: #d11710;
+}
