@@ -67,3 +67,8 @@ a.staticslider-button:nth-child(2n):hover {
 div#footer-inside a {
     color: #d11710;
 }
+
+.container-fluid div.col-6 .row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
