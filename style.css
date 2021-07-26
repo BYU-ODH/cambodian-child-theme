@@ -90,3 +90,7 @@ div.entry-content a:hover {
     color: #474747;
     text-decoration: underline;
 }
+
+li {
+    list-style-type: none;
+}
