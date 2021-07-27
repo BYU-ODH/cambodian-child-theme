@@ -148,3 +148,8 @@ if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
 
 	$custom_tax_mb = new WDS_Taxonomy_Radio( 'gender' );
  }
+
+function translated_interview() {
+	echo pods( 'interview', array( 'limit' => 5000 ) )->template( 'English Translations' );
+}
+add_shortcode('engInt', 'translated_interview');

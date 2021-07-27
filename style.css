@@ -72,3 +72,21 @@ div#footer-inside a {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+div.entry-content a {
+    color: #d11710
+}
+
+div.entry-content a:hover {
+    color: #474747;
+    text-decoration: underline;
+}
+
+#nav-below a {
+    color: #d11710
+}
+
+#nav-below a:hover {
+    color: #474747;
+    text-decoration: underline;
+}
