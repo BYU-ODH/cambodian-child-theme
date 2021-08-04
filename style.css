@@ -12,6 +12,20 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, grid-layout, custom-background, custom-colors, custom-header, flexible-header, custom-menu, featured-image-header, featured-images, front-page-post-form, full-width-template, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, news, photography, portfolio
 Text Domain: septera
 */
+
+@font-face {
+    font-family: 'khmerregular';
+    src: url('Fonts/khmer-regular-webfont.woff2') format('woff2'),
+         url('Fonts/khmer-regular-webfont.woff') format('woff'),
+         url('Fonts/khmer-regular-webfont.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: 'khmerregular';
+}
+
 div#site-title span a {
     color:#d11710;
 }
