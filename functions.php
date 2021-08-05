@@ -150,6 +150,20 @@ if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
  }
 
 function translated_interview() {
-	echo pods( 'interview', array( 'limit' => 5000 ) )->template( 'English Translations' );
+	echo pods( 'interview', array( 'limit' => -1 ) )->template( 'Translation Test' );
 }
 add_shortcode('engInt', 'translated_interview');
+
+function english_translation() {
+	
+	$mypod = pods( 'interview' , array( 'limit' => -1 ) );
+
+	while ( $mypod -> fetch() ) {
+		if( $mypod -> display('translation_file') !== "") {
+			echo '<ul class="translation">';
+			echo    '<li>' . $mypod->display('interviewee') . '</li>';
+			echo '</ul>';
+		}
+	}
+}
+add_shortcode('english', 'english_translation');
