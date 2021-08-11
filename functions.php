@@ -149,21 +149,18 @@ if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
 	$custom_tax_mb = new WDS_Taxonomy_Radio( 'gender' );
  }
 
-function translated_interview() {
-	echo pods( 'interview', array( 'limit' => -1 ) )->template( 'Translation Test' );
-}
-add_shortcode('engInt', 'translated_interview');
-
 function english_translation() {
+    
+	$params = array(
+		'orderby' => 't.post_title ASC',    
+		'limit' => -1,
+		'where' => 'translation_file.meta_value != ""'
+		);
 	
-	$mypod = pods( 'interview' , array( 'limit' => -1 ) );
+	$mypod = pods( 'interview' , $params);
 
 	while ( $mypod -> fetch() ) {
-		if( $mypod -> display('translation_file') !== "") {
-			echo '<ul class="translation">';
-			echo    '<li>' . $mypod->display('interviewee') . '</li>';
-			echo '</ul>';
-		}
-	}
+        echo '<li class="translated">' . '<a href="' . get_the_permalink() . '">' . $mypod->display('interviewee') . '</a' . '</li>';
+    }   
 }
 add_shortcode('english', 'english_translation');
