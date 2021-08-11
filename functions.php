@@ -162,7 +162,7 @@ function english_translation() {
 	while ( $mypod -> fetch() ) {
 		$id = $mypod -> field('id');
 		$permalink = get_permalink($id);
-        echo '<li class="translated">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a' . '</li>';
+        echo '<li class="translated">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a>' . '</li>';
     }   
 }
 add_shortcode('english', 'english_translation');
@@ -180,7 +180,7 @@ function video_interview() {
 	while ( $mypod -> fetch() ) {
 		$id = $mypod -> field('id');
 		$permalink = get_permalink($id);
-        echo '<li class="video">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a' . '</li>';
+        echo '<li class="video">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a>' . '</li>';
     }   
 }
 add_shortcode('video', 'video_interview');
