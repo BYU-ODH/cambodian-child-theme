@@ -164,3 +164,19 @@ function english_translation() {
     }   
 }
 add_shortcode('english', 'english_translation');
+
+function video_interview() {
+    
+	$params = array(
+		'orderby' => 't.post_title ASC',    
+		'limit' => -1,
+		'where' => 'video_link.meta_value != ""'
+		);
+	
+	$mypod = pods( 'interview' , $params);
+
+	while ( $mypod -> fetch() ) {
+        echo '<li class="video">' . '<a href="' . get_the_permalink() . '">' . $mypod->display('interviewee') . '</a' . '</li>';
+    }   
+}
+add_shortcode('video', 'video_interview');
