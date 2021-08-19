@@ -149,7 +149,38 @@ if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
 	$custom_tax_mb = new WDS_Taxonomy_Radio( 'gender' );
  }
 
-function translated_interview() {
-	echo pods( 'interview', array( 'limit' => 5000 ) )->template( 'English Translations' );
+function english_translation() {
+    
+	$params = array(
+		'orderby' => 't.post_title ASC',    
+		'limit' => -1,
+		'where' => 'translation_file.meta_value != ""'
+		);
+	
+	$mypod = pods( 'interview' , $params);
+
+	while ( $mypod -> fetch() ) {
+		$id = $mypod -> field('id');
+		$permalink = get_permalink($id);
+        echo '<li class="translated">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a>' . '</li>';
+    }   
 }
-add_shortcode('engInt', 'translated_interview');
+add_shortcode('english', 'english_translation');
+
+function video_interview() {
+    
+	$params = array(
+		'orderby' => 't.post_title ASC',    
+		'limit' => -1,
+		'where' => 'video_link.meta_value != ""'
+		);
+	
+	$mypod = pods( 'interview' , $params);
+
+	while ( $mypod -> fetch() ) {
+		$id = $mypod -> field('id');
+		$permalink = get_permalink($id);
+        echo '<li class="video">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a>' . '</li>';
+    }   
+}
+add_shortcode('video', 'video_interview');
