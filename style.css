@@ -105,6 +105,6 @@ div.entry-content a:hover {
     text-decoration: underline;
 }
 
-li {
+#no-bullets {
     list-style-type: none;
 }
