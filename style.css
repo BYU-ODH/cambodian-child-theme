@@ -176,3 +176,14 @@ input[type="text"] {
 .fs-label {
     padding: .3em 1em .3em .2em;
 }
+
+/* Styling for interviewee pictures */
+#interviewee-picture {
+    width: 250px;
+    height: 250px;
+}
+
+#interviewee-picture img {
+    width: 100%;
+    height: auto;
+}
