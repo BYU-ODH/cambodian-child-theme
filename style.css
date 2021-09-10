@@ -26,6 +26,8 @@ html {
     font-family: 'khmerregular';
 }
 
+/* Site title styling */
+
 div#site-title span a {
     color:#d11710;
 }
@@ -34,9 +36,7 @@ div#site-title a:hover {
     color:black;
 }
 
-i.icon-bread-home {
-    color:#d11710;
-}
+/* Search bar styling */
 
 #access > div > ul > li.menu-search-animated {
     text-align: left;
@@ -45,6 +45,8 @@ i.icon-bread-home {
 .searchform {
     overflow: visible;
 }
+
+/* Styling for text and buttons on the front page slider image */
 
 .lp-staticslider .staticslider-caption-text {
     color: yellow !important;
@@ -78,13 +80,10 @@ a.staticslider-button:nth-child(2n):hover {
     background-color: transparent;
 }
 
+/* Styling for links across the site */
+
 div#footer-inside a {
     color: #d11710;
-}
-
-.container-fluid div.col-6 .row {
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 div.entry-content a {
@@ -105,6 +104,75 @@ div.entry-content a:hover {
     text-decoration: underline;
 }
 
+/* Spacing for indiviual interview page elements */
+
+.container-fluid div.col-6 .row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* List styling for dynamic pages */
+
 #no-bullets {
     list-style-type: none;
+}
+
+/* Styling for interview list */
+.interviewee-directory {
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .interviewee-directory {
+        display: flex;
+    }
+}
+
+.filters {
+    margin: 0em 3em 0em 0em;
+    font-family: sans-serif;
+}
+
+.facetwp-facet {
+    margin: 0px !important;
+}
+
+select.facetwp-sort-select {
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #212529;
+    padding: .3em 1em .3em .2em;
+    width: 14em;
+    margin-bottom: .25em;
+}
+
+select.facetwp-per-page-select {
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #212529;
+    padding: .3em 1em .3em .2em;
+    width: 14em;
+    margin-bottom: .25em;
+}
+
+input[type="text"] {
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #212529 !important;
+    padding: .3em 1em .3em .45em !important;
+    width: 14em;
+    margin-bottom: .25em !important;
+}
+
+.fs-label-wrap {
+    border: 3px solid #f0eef0 !important; 
+    width: 14em !important;
+}
+
+.fs-label-wrap:hover {
+    background-color: #f0eef0;
+}
+
+.fs-label {
+    padding: .3em 1em .3em .2em;
 }
