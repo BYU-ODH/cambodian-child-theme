@@ -159,11 +159,11 @@ select.facetwp-per-page-select {
     margin-bottom: .25em;
 }
 
-select.facetwp-per-page-select:hover {
-    background-color: transparent;
+select:hover {
+    background-color: transparent !important;
 }
 
-input.facetwp-search {
+input[type=text] {
     font-family: sans-serif;
     font-weight: normal;
     color: #212529 !important;
@@ -201,8 +201,19 @@ span.fs-arrow {
     display: none;
 }
 
+.fs-label {
+    background: url("Images/down-arrow.png") no-repeat right #fff;
+    background-position-x: 12.8em;
+}
+
 .facetwp-sort {
-    background: url("Images/down-arrow.svg") no-repeat right #fff;
+    background: url("Images/down-arrow.png") no-repeat right #fff;
+    background-position-x: 13em;
+}
+
+.facetwp-facet-per_page {
+    background: url("Images/down-arrow.png") no-repeat right #fff;
+    background-position-x: 13em;
 }
 
 /* Styling for interviewee pictures */
