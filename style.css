@@ -146,6 +146,10 @@ select.facetwp-sort-select {
     margin-bottom: .25em;
 }
 
+select.facetwp-sort-select:hover {
+    background-color: transparent;
+}
+
 select.facetwp-per-page-select {
     font-family: sans-serif;
     font-weight: normal;
@@ -155,13 +159,21 @@ select.facetwp-per-page-select {
     margin-bottom: .25em;
 }
 
-input[type="text"] {
+select:hover {
+    background-color: transparent !important;
+}
+
+input[type=text] {
     font-family: sans-serif;
     font-weight: normal;
     color: #212529 !important;
-    padding: .3em 1em .3em .45em !important;
+    padding: .3em 1em .3em .2em !important;
     width: 14em;
     margin-bottom: .25em !important;
+}
+
+input.facetwp-search:hover {
+    background-color: #ffffff !important;
 }
 
 .fs-label-wrap {
@@ -169,15 +181,47 @@ input[type="text"] {
     width: 14em !important;
 }
 
-.fs-label-wrap:hover {
-    background-color: #f0eef0;
+.fs-dropdown {
+    width: 14em !important;
 }
 
 .fs-label {
-    padding: .3em 1em .3em .2em;
+    padding: .5em 1em .5em .2em !important;
+}
+
+.facetwp-icon {
+    opacity: 1 !important;
+}
+
+/* Custom dropdown arrows on interview list filters */
+
+select {
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+span.fs-arrow {
+    display: none;
+}
+
+.fs-label {
+    background: url("Images/down-arrow.png") no-repeat right #fff;
+    background-position-x: 12.8em;
+}
+
+.facetwp-sort {
+    background: url("Images/down-arrow.png") no-repeat right #fff;
+    background-position-x: 13em;
+}
+
+.facetwp-facet-per_page {
+    background: url("Images/down-arrow.png") no-repeat right #fff;
+    background-position-x: 13em;
 }
 
 /* Styling for interviewee pictures */
+
 #interviewee-picture {
     width: 250px;
     height: 250px;
