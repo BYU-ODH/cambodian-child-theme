@@ -189,6 +189,10 @@ input.facetwp-search:hover {
     padding: .5em 1em .5em .2em !important;
 }
 
+.facetwp-icon {
+    opacity: 1 !important;
+}
+
 /* Custom dropdown arrows on interview list filters */
 
 select {
