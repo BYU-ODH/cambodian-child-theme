@@ -239,13 +239,13 @@ footer#footer.cryout {
 }
 
 div.footer-three {
-    padding: 1em !important;
+    padding: .5em !important;
     display: block;
 }
 
 @media only screen and (min-width: 1024px) {
     div.footer-three {
-        padding: 1em !important;
+        padding: .5em !important;
         display: grid;
         grid-template-columns: 1fr repeat(3, auto) 1fr;
     }
