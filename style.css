@@ -231,3 +231,38 @@ span.fs-arrow {
     width: 100%;
     height: auto;
 }
+
+/* Footer */
+
+footer#footer.cryout {
+    display: none;
+}
+
+div.footer-three {
+    padding: .5em !important;
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    div.footer-three {
+        padding: .5em !important;
+        display: grid;
+        grid-template-columns: 1fr repeat(3, auto) 1fr;
+    }
+    ul.wp-block-social-links {
+        float: right;
+    }
+}
+.wp-block-social-links:not(.is-style-logos-only) .wp-social-link-facebook {
+    background-color: #d11710;
+}
+
+.wp-block-social-links:not(.is-style-logos-only) .wp-social-link-instagram {
+    background-color: #d11710;
+}
+
+section.widget-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: center;
+}
