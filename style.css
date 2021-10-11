@@ -104,7 +104,11 @@ div.entry-content a:hover {
     text-decoration: underline;
 }
 
-/* Spacing for indiviual interview page elements */
+#mobile-nav a {
+    color: #d11710
+}
+
+/* Styling for individual interview pages */
 
 .container-fluid div.col-6 .row {
     margin-top: 5px;
