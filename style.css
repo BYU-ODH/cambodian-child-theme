@@ -82,10 +82,6 @@ a.staticslider-button:nth-child(2n):hover {
 
 /* Styling for links across the site */
 
-div#footer-inside a {
-    color: #d11710;
-}
-
 div.entry-content a {
     color: #d11710
 }
@@ -95,11 +91,11 @@ div.entry-content a:hover {
     text-decoration: underline;
 }
 
-#nav-below a {
+.navigation a {
     color: #d11710
 }
 
-#nav-below a:hover {
+.navigation a:hover {
     color: #474747;
     text-decoration: underline;
 }
@@ -110,14 +106,33 @@ div.entry-content a:hover {
 
 /* Styling for individual interview pages */
 
-.container-fluid div.col-6 .row {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.individual-interview {
+    display: block;
 }
+
+@media only screen and (min-width: 1024px) {
+    .individual-interview {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.bold-heading {
+    font-weight: bold;
+}
+
+.individual-text p {
+    margin: .3em 0 !important;
+}
+
+.individual-icons div {
+    margin: .3em 0;
+}
+
 
 /* List styling for dynamic pages */
 
-#no-bullets {
+.no-bullets {
     list-style-type: none;
 }
 
@@ -226,12 +241,12 @@ span.fs-arrow {
 
 /* Styling for interviewee pictures */
 
-#interviewee-picture {
+.interviewee-picture {
     width: 250px;
     height: 250px;
 }
 
-#interviewee-picture img {
+.interviewee-picture img {
     width: 100%;
     height: auto;
 }
