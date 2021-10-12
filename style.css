@@ -36,6 +36,10 @@ div#site-title a:hover {
     color:black;
 }
 
+.cryout #branding {
+    margin-right: 1em;
+}
+
 /* Search bar styling */
 
 #access > div > ul > li.menu-search-animated {
@@ -129,6 +133,22 @@ div.entry-content a:hover {
     margin: .3em 0;
 }
 
+/* Styling for individual interviewee pages */
+
+.individual-interviewee {
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .individual-interviewee {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.interviewee-text p {
+    margin: .3em 0 !important;
+}
 
 /* List styling for dynamic pages */
 
