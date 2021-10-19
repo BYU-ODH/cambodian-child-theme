@@ -222,12 +222,12 @@ span.fs-arrow {
 
 /* Styling for interviewee pictures */
 
-#interviewee-picture {
+.interviewee-picture {
     width: 250px;
     height: 250px;
 }
 
-#interviewee-picture img {
+.interviewee-picture img {
     width: 100%;
     height: auto;
 }
