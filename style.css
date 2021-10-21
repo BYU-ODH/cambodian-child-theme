@@ -113,7 +113,7 @@ div.entry-content a:hover {
 
 /* List styling for dynamic pages */
 
-#no-bullets {
+.no-bullets {
     list-style-type: none;
 }
 
