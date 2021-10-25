@@ -36,6 +36,14 @@ div#site-title a:hover {
     color:black;
 }
 
+.cryout #branding {
+    margin-right: 1em;
+}
+
+i.icon-menu {
+    color: #d11710;
+}
+
 /* Search bar styling */
 
 #access > div > ul > li.menu-search-animated {
@@ -80,11 +88,11 @@ a.staticslider-button:nth-child(2n):hover {
     background-color: transparent;
 }
 
-/* Styling for links across the site */
-
-div#footer-inside a {
-    color: #d11710;
+a.staticslider-button {
+    margin: 2em 1em 0em 0em !important;
 }
+
+/* Styling for links across the site */
 
 div.entry-content a {
     color: #d11710
@@ -95,20 +103,59 @@ div.entry-content a:hover {
     text-decoration: underline;
 }
 
-#nav-below a {
+.navigation a {
     color: #d11710
 }
 
-#nav-below a:hover {
+.navigation a:hover {
     color: #474747;
     text-decoration: underline;
 }
 
-/* Spacing for indiviual interview page elements */
+#mobile-nav a {
+    color: #d11710
+}
 
-.container-fluid div.col-6 .row {
-    margin-top: 5px;
-    margin-bottom: 5px;
+/* Styling for individual interview pages */
+
+.individual-interview {
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .individual-interview {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.bold-heading {
+    font-weight: bold;
+}
+
+.individual-text p {
+    margin: .3em 0 !important;
+}
+
+.individual-icons div {
+    margin: .3em 0;
+}
+
+/* Styling for individual interviewee pages */
+
+.individual-interviewee {
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .individual-interviewee {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.interviewee-text p {
+    margin: .3em 0 !important;
 }
 
 /* List styling for dynamic pages */
@@ -129,7 +176,7 @@ div.entry-content a:hover {
 }
 
 .filters {
-    margin: 0em 3em 0em 0em;
+    margin: 0em 1em 1.5em 0em;
     font-family: sans-serif;
 }
 
