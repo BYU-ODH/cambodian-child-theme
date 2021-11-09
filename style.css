@@ -178,6 +178,7 @@ div.entry-content a:hover {
 .filters {
     margin: 0em 1em 1.5em 0em;
     font-family: sans-serif;
+    width: 15em;
 }
 
 .facetwp-facet {
@@ -193,10 +194,6 @@ select.facetwp-sort-select {
     margin-bottom: .25em;
 }
 
-select.facetwp-sort-select:hover {
-    background-color: transparent;
-}
-
 select.facetwp-per-page-select {
     font-family: sans-serif;
     font-weight: normal;
@@ -210,6 +207,10 @@ select:hover {
     background-color: transparent !important;
 }
 
+select:focus {
+    background-color: transparent !important;
+}
+
 input[type=text] {
     font-family: sans-serif;
     font-weight: normal;
@@ -220,7 +221,19 @@ input[type=text] {
 }
 
 input.facetwp-search:hover {
-    background-color: #ffffff !important;
+    background-color: transparent !important;
+}
+
+input.facetwp-search:focus {
+    background-color: transparent !important;
+}
+
+input.facetwp-date:hover {
+    background-color: transparent !important;
+}
+
+input.facetwp-date:focus {
+    background-color: transparent !important;
 }
 
 .fs-label-wrap {
@@ -240,12 +253,25 @@ input.facetwp-search:hover {
     opacity: 1 !important;
 }
 
+.facetwp-facet-age ::placeholder {
+    color: #212529;
+    opacity: 1;
+}
+  
+.facetwp-facet-age :-ms-input-placeholder {
+    color: #212529;
+}
+  
+.facetwp-facet-age ::-ms-input-placeholder {
+    color: #212529;
+}
+
 /* Custom dropdown arrows on interview list filters */
 
 select {
-    -moz-appearance:none;
-    -webkit-appearance:none;
-    appearance:none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 span.fs-arrow {
