@@ -316,6 +316,14 @@ section.widget-container {
     justify-content: center;
 }
 
+.footer-widget-inside p {
+    margin: 0;
+}
+
+.footer-widget-inside ul {
+    margin: 0;
+}
+
 /* nav menu spacing */
 
 ul#prime_nav {
