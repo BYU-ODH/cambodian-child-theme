@@ -270,6 +270,10 @@ input.facetwp-date:focus {
     color: #212529;
 }
 
+i.facetwp-icon {
+    display: none;
+}
+
 /* Custom dropdown arrows on interview list filters */
 
 select {
