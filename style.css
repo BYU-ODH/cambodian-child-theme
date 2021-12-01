@@ -185,13 +185,17 @@ div.entry-content a:hover {
     margin: 0px !important;
 }
 
-select.facetwp-sort-select {
+.facetwp-facet-sort_by select {
     font-family: sans-serif;
     font-weight: normal;
     color: #212529;
     padding: .3em 1em .3em .2em;
     width: 14em;
     margin-bottom: .25em;
+}
+
+.facetwp-facet-sort_by select:hover {
+    background-color: transparent;
 }
 
 select.facetwp-per-page-select {
@@ -283,7 +287,7 @@ span.fs-arrow {
     background-position-x: 12.8em;
 }
 
-.facetwp-sort {
+.facetwp-facet-sort_by {
     background: url("Images/down-arrow.png") no-repeat right #fff;
     background-position-x: 13em;
 }
