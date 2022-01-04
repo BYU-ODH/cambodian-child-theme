@@ -197,7 +197,7 @@ function interview_location() {
 	while ( $mypod -> fetch() ) {
 		$id = $mypod -> field('id');
 		$permalink = get_permalink($id);
-        echo '<li class="video no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+        echo '<li class="location no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
     }   
 }
 add_shortcode('location', 'interview_location');
@@ -214,7 +214,7 @@ function interview_topics() {
 	while ( $mypod -> fetch() ) {
 		$id = $mypod -> field('id');
 		$permalink = get_permalink($id);
-        echo '<li class="video no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+        echo '<li class="topic no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
     }   
 }
 add_shortcode('topics', 'interview_topics');
