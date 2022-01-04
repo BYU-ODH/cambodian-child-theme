@@ -184,3 +184,37 @@ function video_interview() {
     }   
 }
 add_shortcode('video', 'video_interview');
+
+function interview_location() {
+    
+	$params = array(
+		'orderby' => 't.post_title ASC',    
+		'limit' => -1
+		);
+	
+	$mypod = pods( 'province' , $params);
+
+	while ( $mypod -> fetch() ) {
+		$id = $mypod -> field('id');
+		$permalink = get_permalink($id);
+        echo '<li class="video no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+    }   
+}
+add_shortcode('location', 'interview_location');
+
+function interview_topics() {
+    
+	$params = array(
+		'orderby' => 't.post_title ASC',    
+		'limit' => -1
+		);
+	
+	$mypod = pods( 'story_included' , $params);
+
+	while ( $mypod -> fetch() ) {
+		$id = $mypod -> field('id');
+		$permalink = get_permalink($id);
+        echo '<li class="video no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+    }   
+}
+add_shortcode('topics', 'interview_topics');
