@@ -7,4 +7,4 @@ assistant research professor in the [Office of Digital Humanities](https://odh.b
 # Documentation
 The primary
 
-The COHP runs on WordPress. Its uses a [child theme]() of [Septera](https://wordpress.org/themes/septera/).
+The COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/cambodian-child-theme) of [Septera](https://wordpress.org/themes/septera/).
