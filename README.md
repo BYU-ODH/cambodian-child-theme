@@ -11,7 +11,6 @@ The site and its current functionality depend on three things:
 
 In this documentation, we describe how these three things are used and interact with one another.
 
-
 ## Theme
 COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/cambodian-child-theme) of [Septera](https://wordpress.org/themes/septera/). The child theme makes adjustments to the following items from the default Septera theme:
 - colors throughout the site for links, headers, etc.
@@ -21,3 +20,30 @@ COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/camb
 - the footer, which includes an auto-updated copyright statement
 
 ## Pods
+COHP uses the [Pods plugin](https://pods.io/) to create custom content types that function as a simplified database. These custom content types include post types and taxonomies. 
+
+### Custom Post Types
+The custom post types are as follows:
+- Interviewees, data about individuals interviewed by the project
+- Interviewers, data about individuals who conducted the interviews
+- Interviews, data about the interviews themselves 
+- Provinces, data about the different provinces in Cambodia, including proper spelling in Khmer and [GeoNames](https://www.geonames.org/) URIs
+- Stories Included, topics that frequently appear in interviews; in many ways, this functions similar to a tag
+- Villages, data about villages in Cambodia, including proper spelling in Khmer and [Geonames](https://www.geonames.org/) URIs
+- Zodiac, the 12 animals that are used in the Chinese zodiac; in many ways, this functions similar to a tag
+
+### Custom Taxonomies
+The custom taxonomies are used primarily on the `Interviewees` custom post type. They are as follows:
+- Current Religion, which religion an interviewee currently practices
+- Language Spoken, which language(s) an interviewee speaks (**Need to ask team whether this is for languages they use _in_ the interviewee or just the total range of languages that a person speaks**)
+- Raised Religion, which religion an interviewee was raised within
+
+Additionally, there is a custom taxonomy that is used on both the `Interviewees` and the `Interviewers` custom post type:
+- Gender, the gender of the individual
+
+Custom taxonomies were deployed so the students doing data entry would be less likely to make errors such as spelling or different ways of describing gender. 
+
+Both the `Stories Included` and `Zodiac` custom post types could have easily been custom taxonomies. But since custom taxonomies appear on the righthand side of the WordPress interface, a decision was made to use custom post types so this information would be more visible to those doing data entry.
+
+
+An `interviewee` particiaptes in an `interview` which is conducted by an `interviewer`
