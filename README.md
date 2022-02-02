@@ -47,7 +47,16 @@ Custom taxonomies were deployed so the students doing data entry would be less l
 Both the `Stories Included` and `Zodiac` custom post types could have easily been custom taxonomies. But since custom taxonomies appear on the righthand side of the WordPress interface, a decision was made to use custom post types so this information would be more visible (and therefore more likely to be completed) to those doing data entry.
 
 ### Pods Templates
-Pods makes possible the creation of templates to display information from the custom post types. 
+Pods makes possible the creation of templates to display information from the custom post types.
 
+- There are currently six templates: `Topics in Interviews`, `People from Province`, `Interviewee Directory`, `Interview Template`, `Interviewer Template`, and `Interviewee Template`. 
 
-### Auto-generated Pages in Pods
+These templates can be used in Facet templates or shortcodes, or they can be added to a Pod through the Auto Template Option in order to automatically generate pages.
+
+- The big interview list is created through a Facet template that calls the `Interviewee Directory` template.
+- Individual interview, interviewee, and interviewer pages, as well as the pages for individual provinces or topics, are created through the Auto Template Option in Pods, which automatically generates all of these pages.
+
+### Shortcode Pages
+Several pages are made through shortcodes that can be found in `functions.php`. These pages include the Interviews with English Translations, Interviews with Videos, Interview Topics, and Interviews by Location. The shortcode queries Pods and returns any values that fit the given parameters.
+
+Due to some interference between the shortcodes and any text on the same page, these pages are built with Elementor in order to have individual blocks for the shortcode and for the text.
