@@ -20,7 +20,7 @@ COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/camb
 - the footer, which includes an auto-updated copyright statement
 
 ## Pods
-COHP uses the [Pods plugin](https://pods.io/) to create custom content types that function as a simplified database. These custom content types include post types and taxonomies. 
+COHP uses the [Pods plugin](https://pods.io/) to create custom content types that function as a simplified database. These custom content types include post types and taxonomies. Custom content types can have bi-directional relationships to other custom content types, allowing us to create semantic relationships where an `interviewee` particiaptes in an `interview` which is conducted by an `interviewer`.
 
 ### Custom Post Types
 The custom post types are as follows:
@@ -28,6 +28,7 @@ The custom post types are as follows:
 - Interviewers, data about individuals who conducted the interviews
 - Interviews, data about the interviews themselves 
 - Provinces, data about the different provinces in Cambodia, including proper spelling in Khmer and [GeoNames](https://www.geonames.org/) URIs
+  - It's worth noting that users have begun putting in other locations like states (e.g., Utah, California) or countries (e.g., Vietnam) since not all interviees were born in and/or currently live in Cambodia
 - Stories Included, topics that frequently appear in interviews; in many ways, this functions similar to a tag
 - Villages, data about villages in Cambodia, including proper spelling in Khmer and [Geonames](https://www.geonames.org/) URIs
 - Zodiac, the 12 animals that are used in the Chinese zodiac; in many ways, this functions similar to a tag
@@ -43,7 +44,10 @@ Additionally, there is a custom taxonomy that is used on both the `Interviewees`
 
 Custom taxonomies were deployed so the students doing data entry would be less likely to make errors such as spelling or different ways of describing gender. 
 
-Both the `Stories Included` and `Zodiac` custom post types could have easily been custom taxonomies. But since custom taxonomies appear on the righthand side of the WordPress interface, a decision was made to use custom post types so this information would be more visible to those doing data entry.
+Both the `Stories Included` and `Zodiac` custom post types could have easily been custom taxonomies. But since custom taxonomies appear on the righthand side of the WordPress interface, a decision was made to use custom post types so this information would be more visible (and therefore more likely to be completed) to those doing data entry.
+
+### Pods Templates
+Pods makes possible the creation of templates to display information from the custom post types. 
 
 
-An `interviewee` particiaptes in an `interview` which is conducted by an `interviewer`
+### Auto-generated Pages in Pods
