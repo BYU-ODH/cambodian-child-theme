@@ -1,4 +1,4 @@
-The code below is for the FacetWP template, which is gneerally not stored anywhere outside of the WP installation.
+The code below is for the FacetWP template, which is gneerally not stored anywhere outside of the WP installation. This needs to be added under the Advanced Mode when creating a facet.
 
 ## Display
 
