@@ -35,7 +35,7 @@ The custom post types are as follows:
 - Interviewers, data about individuals who conducted the interviews
 - Interviews, data about the interviews themselves 
 - Provinces, data about the different provinces in Cambodia, including proper spelling in Khmer and [GeoNames](https://www.geonames.org/) URIs
-  - It's worth noting that users have begun putting in other locations like states (e.g., Utah, California) or countries (e.g., Vietnam) since not all interviees were born in and/or currently live in Cambodia
+  - It's worth noting that users have begun putting in other locations like states (e.g., Utah, California) or countries (e.g., Vietnam) since not all interviewees were born in and/or currently live in Cambodia
 - Stories Included, topics that frequently appear in interviews; in many ways, this functions similar to a tag
 - Villages, data about villages in Cambodia, including proper spelling in Khmer and [Geonames](https://www.geonames.org/) URIs
 - Zodiac, the 12 animals that are used in the Chinese zodiac; in many ways, this functions similar to a tag
