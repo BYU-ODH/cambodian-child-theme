@@ -24,7 +24,7 @@ COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/camb
 ### Shortcode Pages
 Several pages are made through shortcodes that can be found in `functions.php`. These pages include the [Interviews with English Translations](https://cambodianoralhistoryproject.byu.edu/interviews-with-english-translations/), [Interviews with Videos](https://cambodianoralhistoryproject.byu.edu/interviews-with-videos/), [Interview Topics](https://cambodianoralhistoryproject.byu.edu/interview-topics/), and [Interviews by Location](https://cambodianoralhistoryproject.byu.edu/interviews-by-location/). Each shortcode queries a Pod and returns the values that fit the given parameters.
 
-Due to some interference between the shortcodes and any text on the same page, these pages are built with [Elementor](https://elementor.com/) in order to have individual blocks for the shortcode and for the text, allowing us to order the blocks on the page in the order that we want.
+Due to some interference between the shortcodes and any text on the same page, these pages are built with [Elementor](https://elementor.com/) in order to have individual blocks for the shortcode and for the text, allowing us to order the blocks on the page how we want.
 
 ## Pods
 COHP uses the [Pods plugin](https://pods.io/) to create custom content types that function as a simplified database. These custom content types include post types and taxonomies. Custom content types can have bi-directional relationships to other custom content types, allowing us to create semantic relationships where an `interviewee` particiaptes in an `interview` which is conducted by an `interviewer`.
