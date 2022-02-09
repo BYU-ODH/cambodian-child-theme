@@ -67,9 +67,9 @@ These templates can be used in Facet templates or shortcodes, or they can be add
 COHP uses the [FacetWP plugin](https://facetwp.com/) to enable faceted browsing on the [Interview Directory](https://cambodianoralhistoryproject.byu.edu/interviews/). The plugin allows for the creation of facets and templates.
 
 ### Facets
-Facets are mostly ways to filter content. There are also facets for pagination and the number of results per page. When creating a new facet, the plugin can look to custom taxonomies or any of the content within a particular Pod. 
+Facets are mostly ways to filter content. There are also facets for pagination and the number of results per page. When creating a new facet, the plugin can look to custom taxonomies or any of the content within a particular Pod. We have created [screenshots of the different facets](https://github.com/BYU-ODH/cambodian-child-theme/tree/master/facetwp-templates), in case they need to be recreated.
 
 ### Templates
-Templates can either be built visually or through HTML/PHP. COHP uses the latter, and the template can be found here.
+Templates can either be built visually or through HTML/PHP (AKA advanced). COHP uses the latter, and the template can be found [here](https://github.com/BYU-ODH/cambodian-child-theme/blob/master/facetwp-templates/template.md).
 
 **N.B.** If you want a facet to work on a page, its source needs to match the Pod that will be the primary datasource on the page. For example, the [Interview Directory](https://cambodianoralhistoryproject.byu.edu/interviews/) is, despite its name, actually comprised of results from the `Interviewees` Pod rather than the `Interview` Pod. While the `Interviewee` Pod contains a person's `date of birth`, their `age at the time of interview` is contained in their `Interview` Pod. So it was impossible to include a facet for the `age at time of interview` in the Interview Directory.
