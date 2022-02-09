@@ -21,6 +21,11 @@ COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/camb
   - pages, on the other hand, use featured images which are set individually by the team
 - the footer, which includes an auto-updated copyright statement
 
+### Shortcode Pages
+Several pages are made through shortcodes that can be found in `functions.php`. These pages include the Interviews with English Translations, Interviews with Videos, Interview Topics, and Interviews by Location. The shortcode queries Pods and returns any values that fit the given parameters.
+
+Due to some interference between the shortcodes and any text on the same page, these pages are built with Elementor in order to have individual blocks for the shortcode and for the text, allowing us to order the blocks on the page in the order that we want.
+
 ## Pods
 COHP uses the [Pods plugin](https://pods.io/) to create custom content types that function as a simplified database. These custom content types include post types and taxonomies. Custom content types can have bi-directional relationships to other custom content types, allowing us to create semantic relationships where an `interviewee` particiaptes in an `interview` which is conducted by an `interviewer`.
 
@@ -58,7 +63,13 @@ These templates can be used in Facet templates or shortcodes, or they can be add
 - The [big interview list](https://cambodianoralhistoryproject.byu.edu/interviews/) is created through a Facet template that calls the `Interviewee Directory` template.
 - Individual interview, interviewee, and interviewer pages, as well as the pages for individual provinces or topics, are created through the Auto Template Option in Pods, which automatically generates all of these pages.
 
-### Shortcode Pages
-Several pages are made through shortcodes that can be found in `functions.php`. These pages include the Interviews with English Translations, Interviews with Videos, Interview Topics, and Interviews by Location. The shortcode queries Pods and returns any values that fit the given parameters.
+## FacetWP
+COHP uses the [FacetWP plugin](https://facetwp.com/) to enable faceted browsing on the [Interview Directory](https://cambodianoralhistoryproject.byu.edu/interviews/). The plugin allows for the creation of facets and templates.
 
-Due to some interference between the shortcodes and any text on the same page, these pages are built with Elementor in order to have individual blocks for the shortcode and for the text, allowing us to order the blocks on the page in the order that we want.
+### Facets
+Facets are mostly ways to filter content. There are also facets for pagination and the number of results per page. When creating a new facet, the plugin can look to custom taxonomies or any of the content within a particular Pod. 
+
+### Templates
+Templates can either be built visually or through HTML/PHP. COHP uses the latter, and the template can be found here.
+
+**N.B.** If you want a facet to work on a page, its source needs to match the Pod that will be the primary datasource on the page. For example, the [Interview Directory](https://cambodianoralhistoryproject.byu.edu/interviews/) is, despite its name, actually comprised of results from the `Interviewees` Pod rather than the `Interview` Pod. While the `Interviewee` Pod contains a person's `date of birth`, their `age at the time of interview` is contained in their `Interview` Pod. So it was impossible to include a facet for the `age at time of interview` in the Interview Directory.
