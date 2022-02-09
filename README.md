@@ -16,7 +16,9 @@ COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/camb
 - colors throughout the site for links, headers, etc.
 - styling and flex boxes for different types of pages on the site, including how FacetWP displays on the [interview directory](https://cambodianoralhistoryproject.byu.edu/interviews/)
 - margins for pages and posts
-- the behavior of header/feature images on posts and pages: posts randomly draw from a selection of header images that have been added to the site rather than using a featured image (this was done as most featured images have people's faces in them, and the cropping and positioning was overly complicated); pages, on the other hand, use featured images which are set individually by the team
+- the behavior of header/feature images on posts and pages: 
+  - posts randomly draw from a selection of header images that have been added to the site rather than using a featured image (this was done as most featured images have people's faces in them, and the cropping and positioning was overly complicated); 
+  - pages, on the other hand, use featured images which are set individually by the team
 - the footer, which includes an auto-updated copyright statement
 
 ## Pods
