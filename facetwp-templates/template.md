@@ -1,4 +1,6 @@
-# Display
+The code below is for the FacetWP template, which is gneerally not stored anywhere outside of the WP installation.
+
+## Display
 
 ```
 <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.css">
@@ -43,7 +45,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 </div>
 ```
   
-# Query
+## Query
 ```
 <?php
 return [
