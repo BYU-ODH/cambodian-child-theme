@@ -22,7 +22,7 @@ COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/camb
 - the footer, which includes an auto-updated copyright statement
 
 ### Shortcode Pages
-Several pages are made through shortcodes that can be found in `functions.php`. These pages include the [Interviews with English Translations](https://cambodianoralhistoryproject.byu.edu/interviews-with-english-translations/), [Interviews with Videos](https://cambodianoralhistoryproject.byu.edu/interviews-with-videos/), [Interview Topics](https://cambodianoralhistoryproject.byu.edu/interview-topics/), and [Interviews by Location](https://cambodianoralhistoryproject.byu.edu/interviews-by-location/). The shortcode queries Pods and returns any values that fit the given parameters.
+Several pages are made through shortcodes that can be found in `functions.php`. These pages include the [Interviews with English Translations](https://cambodianoralhistoryproject.byu.edu/interviews-with-english-translations/), [Interviews with Videos](https://cambodianoralhistoryproject.byu.edu/interviews-with-videos/), [Interview Topics](https://cambodianoralhistoryproject.byu.edu/interview-topics/), and [Interviews by Location](https://cambodianoralhistoryproject.byu.edu/interviews-by-location/). Each shortcode queries a Pod and returns the values that fit the given parameters.
 
 Due to some interference between the shortcodes and any text on the same page, these pages are built with [Elementor](https://elementor.com/) in order to have individual blocks for the shortcode and for the text, allowing us to order the blocks on the page in the order that we want.
 
