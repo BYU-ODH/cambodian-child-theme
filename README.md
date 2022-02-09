@@ -55,10 +55,10 @@ Pods makes possible the creation of templates to display information from the cu
 
 These templates can be used in Facet templates or shortcodes, or they can be added to a Pod through the Auto Template Option in order to automatically generate pages.
 
-- The big interview list is created through a Facet template that calls the `Interviewee Directory` template.
+- The [big interview list](https://cambodianoralhistoryproject.byu.edu/interviews/) is created through a Facet template that calls the `Interviewee Directory` template.
 - Individual interview, interviewee, and interviewer pages, as well as the pages for individual provinces or topics, are created through the Auto Template Option in Pods, which automatically generates all of these pages.
 
 ### Shortcode Pages
 Several pages are made through shortcodes that can be found in `functions.php`. These pages include the Interviews with English Translations, Interviews with Videos, Interview Topics, and Interviews by Location. The shortcode queries Pods and returns any values that fit the given parameters.
 
-Due to some interference between the shortcodes and any text on the same page, these pages are built with Elementor in order to have individual blocks for the shortcode and for the text.
+Due to some interference between the shortcodes and any text on the same page, these pages are built with Elementor in order to have individual blocks for the shortcode and for the text, allowing us to order the blocks on the page in the order that we want.
