@@ -4,14 +4,24 @@ The project is directed by [Dana Bourgerie](https://bourgerie.byu.edu/), profess
 [Department of Asian and Near Eastern Languages](https://ane.byu.edu/). The project's technical work is overseen by [Brian Croxall](https://briancroxall.net), 
 assistant research professor in the [Office of Digital Humanities](https://odh.byu.edu).
 
-The site and its current functionality depend on five things:
+The site and its current functionality primarily depend on five things:
 - [WordPress](https://wordpress.com/), tested 2/16/22 with version 5.9
 - its [theme](https://github.com/BYU-ODH/cambodian-child-theme), which is a child theme of [Septera](https://wordpress.org/themes/septera/), tested 2/16/22 with version 1.5.1
 - the [Pods plugin](https://pods.io/), tested 2/16/22 with version 2.8.8.10
 - the [FacetWP plugin](https://facetwp.com/), tested 2/16/22 with version 3.9.6
 - the [FacetWP - Pods Integration plugin](https://facetwp.com/help-center/using-facetwp-with/pods/), tested 2/16/22 with version 1.2.2
 
-In this documentation, we describe how these three things are used and interact with one another.
+Additionally, there are a handful of plugins that give the site functionality that the team uses but are not integral to the development work that ODH has done on the site. These include:
+- [Better Notifications for WP](https://wordpress.org/plugins/bnfw/), tested 2/16/22 with version 1.8.11
+- [Current Year and Copyright Shortcodes](https://zatzlabs.com/project/current-year-and-copyright-shortcodes/), tested 2/16/22 with version 1.0.2
+- [Elementor](https://elementor.com/), tested 2/16/22 with version 3.5.5
+- [Email Logs](https://wpemaillog.com/), tested 2/16/22 with version 2.4.8
+- [Import and export users and customers](https://wordpress.org/plugins/import-users-from-csv-with-meta/), tested 2/16/22 with version 1.19.1.9
+- [Lara's Google Analytics](https://www.xtraorbit.com/wordpress-google-analytics-dashboard-widget/), tested 2/16/22 with version 3.3.3
+- [Ninja Forms](https://ninjaforms.com/?utm_source=Ninja+Forms+Plugin&utm_medium=readme), tested 2/16/22 with version 3.6.7
+- [WP Cassify](https://wpcassify.wordpress.com/), tested 2/16/22 with version 2.2.8
+
+In this documentation, we describe how these elements are used and interact with one another.
 
 ## Theme
 COHP runs on WordPress. Its uses a [child theme](https://github.com/BYU-ODH/cambodian-child-theme) of [Septera](https://wordpress.org/themes/septera/). The child theme makes adjustments to the following items from the default Septera theme:
@@ -79,3 +89,30 @@ Templates can either be built visually or through HTML/PHP (AKA advanced mode). 
 
 ## FacetWP - Pods Integration
 Paid FacetWP accounts have access to a number of [add-ons](https://facetwp.com/add-ons/) to improve the functionality of FacetWP. This plugin "This lets you create facets based on Pods (meta-based) custom fields."
+
+## Additional Plugins
+
+### Better Notifications for WP
+[This plugin](https://wordpress.org/plugins/bnfw/) allows notifications (AKA emails) to be sent out to certain groups of users when particular events happen. As currently implemented, the team uses this to notify those interested in the project when a new blog post has been published.
+
+### Current Year and Copyright Shortcodes
+[This plugin](https://zatzlabs.com/project/current-year-and-copyright-shortcodes/) provides shortcodes that can be deployed in parts of the site to indicate copyright and current year. This is currently used in the footer widget for the site.
+
+### Elementor
+[This plugin](https://elementor.com/) allows for a GUI-like experience when constructing pages. This is currently used on pages like [Interview Topics](https://cambodianoralhistoryproject.byu.edu/interview-topics/). Without this plugin, the explanatory text on the page appeared below the list of topics. This was the most expeditious way to fix that interaction.
+
+### Email Logs
+[This plugin](https://wpemaillog.com/) creates easy-to-read logs of all emails sent by the WordPress site. The team used it primarily when first setting up notifications with `Better Notifications for WP` to make sure it behaved as desired.
+
+### Import and export users and customers
+[This plugin](https://wordpress.org/plugins/import-users-from-csv-with-meta/) allows for creating users with CSV. The team used it to create new users that would have particular roles so that those users could receive notifications when new posts were published.
+
+### Lara's Google Analytics
+[This plugin](https://www.xtraorbit.com/wordpress-google-analytics-dashboard-widget/) allows for in-dashboard exploration of Google Analytics. It is ODH's go-to plugin for this feature.
+
+### Ninja Forms
+[This plugin](https://ninjaforms.com/?utm_source=Ninja+Forms+Plugin&utm_medium=readme) is used to create forms within the site. The team uses it on the [Contact Us](https://cambodianoralhistoryproject.byu.edu/contact-us/) and [Volunteer](https://cambodianoralhistoryproject.byu.edu/volunteer/) pages. 
+
+### WP Cassify
+- [This plugin](https://wpcassify.wordpress.com/) is used to allow BYU users to log into the site using their Net ID. It is ODH's go-to plugin for this feature. In order for it to be used, users should have their username set to their Net ID (e.g., `blc6`) without any domain. Their email address can be set to any address they would like. When creating new users, the `Send the new user an email about their account` option should be _deselected_ as log-in process will default to BYU's CAS system.
+
