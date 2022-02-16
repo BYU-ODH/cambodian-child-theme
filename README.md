@@ -5,9 +5,9 @@ The project is directed by [Dana Bourgerie](https://bourgerie.byu.edu/), profess
 assistant research professor in the [Office of Digital Humanities](https://odh.byu.edu).
 
 The site and its current functionality depend on four things:
-- [WordPress](https://wordpress.com/), tested in 2/16/22 with version 5.8.1
+- [WordPress](https://wordpress.com/), tested 2/16/22 with version 5.8.1
 - its theme, which is a child theme of [Septera](https://wordpress.org/themes/septera/), tested 2/16/22 with version 1.5.1
-- the [Pods plugin](https://pods.io/), tested in 2/16/22 with version 2.8.8.1
+- the [Pods plugin](https://pods.io/), tested 2/16/22 with version 2.8.8.1
 - the [FacetWP plugin](https://facetwp.com/), tested 2/16/22 with version 3.9.4
 
 In this documentation, we describe how these three things are used and interact with one another.
