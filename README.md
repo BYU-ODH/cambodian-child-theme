@@ -6,7 +6,7 @@ assistant research professor in the [Office of Digital Humanities](https://odh.b
 
 The site and its current functionality depend on five things:
 - [WordPress](https://wordpress.com/), tested 2/16/22 with version 5.9
-- its theme, which is a child theme of [Septera](https://wordpress.org/themes/septera/), tested 2/16/22 with version 1.5.1
+- its [theme](https://github.com/BYU-ODH/cambodian-child-theme), which is a child theme of [Septera](https://wordpress.org/themes/septera/), tested 2/16/22 with version 1.5.1
 - the [Pods plugin](https://pods.io/), tested 2/16/22 with version 2.8.8.10
 - the [FacetWP plugin](https://facetwp.com/), tested 2/16/22 with version 3.9.6
 - the [FacetWP - Pods Integration plugin](https://facetwp.com/help-center/using-facetwp-with/pods/), tested 2/16/22 with version 1.2.2
