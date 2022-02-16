@@ -4,11 +4,12 @@ The project is directed by [Dana Bourgerie](https://bourgerie.byu.edu/), profess
 [Department of Asian and Near Eastern Languages](https://ane.byu.edu/). The project's technical work is overseen by [Brian Croxall](https://briancroxall.net), 
 assistant research professor in the [Office of Digital Humanities](https://odh.byu.edu).
 
-The site and its current functionality depend on four things:
-- [WordPress](https://wordpress.com/), tested 2/16/22 with version 5.8.1
+The site and its current functionality depend on five things:
+- [WordPress](https://wordpress.com/), tested 2/16/22 with version 5.9
 - its theme, which is a child theme of [Septera](https://wordpress.org/themes/septera/), tested 2/16/22 with version 1.5.1
-- the [Pods plugin](https://pods.io/), tested 2/16/22 with version 2.8.8.1
-- the [FacetWP plugin](https://facetwp.com/), tested 2/16/22 with version 3.9.4
+- the [Pods plugin](https://pods.io/), tested 2/16/22 with version 2.8.8.10
+- the [FacetWP plugin](https://facetwp.com/), tested 2/16/22 with version 3.9.6
+- the [FacetWP - Pods Integration plugin](https://facetwp.com/help-center/using-facetwp-with/pods/), tested 2/16/22 with version 1.2.2
 
 In this documentation, we describe how these three things are used and interact with one another.
 
@@ -75,3 +76,6 @@ Templates can either be built visually or through HTML/PHP (AKA advanced mode). 
 
 ### Matching Queries, Pages, and Templates
 **Critical**: If you want a facet to work on a page, its source needs to match the Pod that will be the primary datasource on the page. For example, the [Interview Directory](https://cambodianoralhistoryproject.byu.edu/interviews/) is, despite its name, actually comprised of results from the `Interviewees` Pod rather than the `Interviews` Pod. While the `Interviewee` Pod contains a person's `date of birth`, their `age at the time of interview` is contained in their `Interview` Pod. So it was impossible to include a facet for the `age at time of interview` in the Interview Directory.
+
+## FacetWP - Pods Integration
+Paid FacetWP accounts have access to a number of [add-ons](https://facetwp.com/add-ons/) to improve the functionality of FacetWP. This plugin "This lets you create facets based on Pods (meta-based) custom fields."
