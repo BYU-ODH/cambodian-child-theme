@@ -1,0 +1,21 @@
+[before]
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+[/before]
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-9">
+			[if interviewee_born]
+			<h3>List of Interviewees</h3>
+				[each interviewee_born]
+			<li class="no-bullets"><a href="{@interviewee_born.permalink}">{@post_title} </a> </li>
+				[/each]
+			[/if]
+		</div>
+		<div class="col-3">
+			[if google_map_link]
+			{@google_map_link}
+			[/if]
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+<tr>
+			<td class="text-center align-middle interviewee-picture">
+				<a href={@permalink}>
+				 [if picture]
+					 {@picture._img}
+				
+				 [else]
+				  <img src="https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/05/No-Image.png"/>
+				 [/if]
+				</a>
+			</td>
+			<td class="text-center align-middle">
+				<h6><a href="{@permalink}">{@post_title}</a></h6>
+			</td>
+			<td class="text-center align-middle" id="content-desktop">
+			[if participated_in_interview]
+				[each participated_in_interview]
+					[if interviewees_age]
+					{@interviewees_age}
+					[/if]
+				[/each]
+			[/if]
+			</td>
+			<td class="text-center align-middle" id="content-desktop">
+				[if participated_in_interview]
+					[each participated_in_interview]
+						[if transcript_file]
+							<a href="{@permalink}"><img src="https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/08/KhmerFile-1.png" style="max-width: 50px;"/></a>
+						[/if]
+					[/each]
+				[/if]
+			</td>
+		</tr>

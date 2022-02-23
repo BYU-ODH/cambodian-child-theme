@@ -1,0 +1,49 @@
+[before]
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+[/before]
+<div class="individual-interviewee">
+	<div class="interviewee-text">
+		[if birth_year]
+			[if birth_month]
+				[if birth_date]
+					<p><span class="bold-heading">Birthday:</span> {@birth_date} {@birth_month} {@birth_year}</p>
+				[else]
+					<p><span class="bold-heading">Birth month:</span> {@birth_month} {@birth_year}</p>
+				[/if]
+			[else]
+				<p><span class="bold-heading">Birth year:</span> {@birth_year}</p>
+			[/if]
+		[/if]
+		[if birth_location_province]
+			<p><span class="bold-heading">Birth province:</span> <a href="{@birth_location_province.permalink}">{@birth_location_province}</a></p>
+		[/if]
+		[if birth_location_village]
+			<p><span class="bold-heading">Birth village:</span> <a href="{@birth_location_village.permalink}">{@birth_location_village}</a></p>
+		[/if]
+		[if participated_in_interview]
+			<p><span class="bold-heading">Interview:</span>
+			<!--<ul style="list-style: none; padding: 0;">-->
+			[each participated_in_interview]
+				<a href="{@permalink}">
+					[if interview_year]
+						[if interview_month]
+							[if interview_day]
+								{@interview_day} {@interview_month} {@interview_year} Interview</p>
+							[else]
+								{@interview_month} {@interview_year} Interview</p>
+							[/if]
+						[else]
+							{@interview_year} Interview</p>
+						[/if]
+					[/if]
+				</a>
+			[/each]
+		[/if]
+	</div>
+	<div class="interviewee-image">
+		[if picture]
+			<img src="{@picture}" style="max-width: 320px;">
+		[/if]
+	</div>
+</div>
