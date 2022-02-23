@@ -1,0 +1,23 @@
+[before]
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+[/before]
+<div class="interviewer-info">
+	[if birth_year]
+		[if birth_month]
+			[if birth_date]
+				<p>Birthday: {@birth_date} {@birth_month} {@birth_year}</p>
+			[else]
+				<p>Birth Month: {@birth_month} {@birth_year}</p>
+			[/if]
+		[else]
+			<p>Birth Year: {@birth_year}</p>
+		[/if]
+	[/if]
+
+	[if participated_interview]
+		[each participated_interview]
+			<li class="no-bullets"><a href="{@participated_interview.permalink}">{@post_title} </a></li>
+		[/each]
+	[/if]
+</div>
