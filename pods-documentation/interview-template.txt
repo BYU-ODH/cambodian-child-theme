@@ -1,0 +1,73 @@
+[before]
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+[/before]
+<div class="individual-interview">
+	<div class="individual-text">
+		<div class="interview-time">
+		[if interview_year]
+			[if interview_month]
+				[if interview_day]
+					<p><span class="bold-heading">Interview Date:</span> {@interview_day} {@interview_month} {@interview_year}</p>
+				[else]
+					<p><span class="bold-heading">Interview Month:</span> {@interview_month} {@interview_year}</p>
+				[/if]
+			[else]
+				<p><span class="bold-heading">Interview Year:</span> {@interview_year}</p>
+			[/if]
+		[/if]
+		</div>
+		<div class="interviewee-name">
+		[if interviewee]
+			<p><span class="bold-heading">Interviewee:</span> <a href="{@interviewee.permalink}">{@interviewee.family_name_khmer} {@interviewee.given_name_khmer} {@interviewee.family_name_romanized} {@interviewee.given_name_romanized}</a></p>
+		[/if]
+		</div>
+		<div class="interviewer-name">
+		[if interviewer]
+			<p><span class="bold-heading">Interviewer:</span> <a href="{@interviewer.permalink}">{@interviewer.family_name_khmer} {@interviewer.given_name_khmer} {@interviewer.family_name_romanized} {@interviewer.given_name_romanized}</a></p>
+		[/if]
+		</div>
+		<div class="interview-place">
+		[if interview_place]
+			<p><span class="bold-heading">Interview Place:</span> {@interview_place}</p>
+		[/if]
+		</div>
+		<div class="transcriber">
+		[if transcriber]
+			<p><span class="bold-heading">Transcriber:</span> {@transcriber}</p>
+		[/if]
+		</div>
+		<div class="box-link">
+		[if link_to_box_folder]
+			<a href={@link_to_box_folder}><p>All Interview Materials</p></a>
+		[/if]
+		</div>
+	</div>
+	<div class="individual-icons">
+		<div class="video-player">
+			[if video_link]
+			<iframe id="ytplayer" type="text/html" width="400" height="225"
+			src="{@video_link}"
+			frameborder="0" allowfullscreen></iframe>
+			[/if]
+			[if audio_link]
+		</div>
+		<div class="audio-player">
+			<audio controls>
+				<source src="{@audio_link}" type="audio/mpeg">
+				<source src="{@audio_link}" type="audio/x-m4a">
+				<source src="{@audio_link}" type="audio/aac">
+				Your browser does not support the audio element.
+			</audio>
+			[/if]
+		</div>
+		<div class="transcipt-translation">
+			[if transcript_file]
+				<a href="{@transcript_file}" style="float: left;"><img src="https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/08/KhmerFile-1.png" style="max-width: 100px;"/></a>
+			[/if]
+			[if translation_file]
+				<a href="{@translation_file}" style="float: ;"><img src="https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/07/EnglishFile-1.png" style="max-width: 100px;"/></a>
+			[/if]
+		</div>
+	</div>
+</div>
