@@ -363,3 +363,10 @@ section.widget-container {
 ul#prime_nav {
     margin: 0;
 }
+
+.list {
+list-style-type: none;
+}
+.title{
+font-weight: 400;
+}
