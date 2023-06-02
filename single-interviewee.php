@@ -100,12 +100,13 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                             echo("<img style='max-width: 320px' src='$picture[guid]'/>");
                         }?>
                     
+                        
                         <!-- Audio info -->
                         <?php if($audio_link) { 
                             echo("<audio controls>");
-                            echo("<source href='$audio_link' type='audio/mpeg'>");
-                            echo("<source href='$audio_link' type='audio/x-m4a'>");
-                            echo("<source href='$audio_link' type='audio/aac'>");
+                            echo("<source src='$audio_link' type='audio/mpeg'>");
+                            echo("<source src='$audio_link' type='audio/x-m4a'>");
+                            echo("<source src='$audio_link' type='audio/aac'>");
                             echo("</audio>");
                         } 
                         ?>
