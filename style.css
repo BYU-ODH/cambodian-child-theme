@@ -29,7 +29,7 @@ html {
 /* Site title styling */
 
 div#site-title span a {
-    color:#d11710;
+    color:#d11710 !important;
 }
 
 div#site-title a:hover {
