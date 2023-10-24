@@ -36,56 +36,56 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
             <h1 class="entry-title singular-title"><?php the_title(); ?></h1>
             <div class="entry-meta aftertitle-meta"></div>
                 <div class="individual-interviewee">
-                    <div class="interviewee-text">   
-                        <?php if ($birth_year && $birth_month && $birth_date) {
-                            echo("<span class='bold-heading'>Birthday: </span>".$birth_date . ' ' . $birth_month . ' ' . $birth_year);
-                            } 
-                            else if ($birth_month && $birth_year) {
-                                echo("<p><span class='bold-heading'>Birth month: </span>".$birth_month . ' ' . $birth_year."</p>");
-                            }
-                            else if ($birth_year){
-                                echo("<p><span class='bold-heading'>Birth year: </span>".$birth_year."</p>");
-                            }
-                        ?>
-                        <!-- Birth Location -->
-                        <?php if ($birth_location_province) {
-                            echo("<span class='bold-heading'>Birth province: </span>");
-                            echo("<a href='$birth_location_province[guid]'>".$birth_location_province['post_title']."</a></p>");
-                        } ?>
-                        <!-- Birth location Village -->
-                        <?php if ($birth_location_village) {
-                            echo("<span class='bold-heading'>Birth village: </span>");
-                            echo("<a href='$birth_location_village[0][guid]'>".$birth_location_village['post_title']."</a></p>");
-                        }?>
-
-                        <h4 class="Interview">Interview(s)</h4>
-
-
+                    <div class="interviewee-text">  
+                        <div>
+                            <?php if ($birth_year && $birth_month && $birth_date) {
+                                    echo("<div class='bold-heading'>Birthday: ".$birth_date . ' ' . $birth_month . ' ' . $birth_year."</div>");
+                                } 
+                                else if ($birth_month && $birth_year) {
+                                    echo("<div class='bold-heading'>Birth month: ".$birth_month . ' ' . $birth_year."</div>");
+                                }
+                                else if ($birth_year){
+                                    echo("<div class='bold-heading'>Birth year: ".$birth_year."</div>");
+                                }
+                            ?>
+                            <!-- Birth Location -->
+                            <?php if ($birth_location_province) {
+                                echo("<div class='bold-heading'>Birth province: "."<a href='$birth_location_province[guid]'>".$birth_location_province['post_title']."</a></div>");
+                            } ?>
+                            <!-- Birth location Village -->
+                            <?php if ($birth_location_village) {
+                                echo("<div class='bold-heading'>Birth village: </div>");
+                                echo("<a href='$birth_location_village[0][guid]'>".$birth_location_village['post_title']."</a></p>");
+                            }?>
+                        </div> 
+                        
+                        <div>        
+                            <h4 class="Interview">Interview(s)</h4>
                         <!-- Interview Date -->
-                        <?php if ($participated_in_interview) {
-                            echo("<span class='bold-heading'>Date: </span>");
-                            foreach ($participated_in_interview as $interview) {
-                                if ($interview_year && $interview_month && $interview_day) {
-                                    echo($interview_day. ' ' . $interview_month. ' ' . $interview_year. ' Interview');
-                                }
-                                else if($interview_month && $interview_year ) {
-                                    echo ($interview_month. ' ' . $interview_year. ' Interview');
-                                }
-                                else if($interview_year){
-                                    echo ($interview_year. ' Interview');
-                                }
+                            <?php if ($participated_in_interview) {
+                                echo("<span class='bold-heading'>Date: </span>");
+                                foreach ($participated_in_interview as $interview) {
+                                    if ($interview_year && $interview_month && $interview_day) {
+                                        echo($interview_day. ' ' . $interview_month. ' ' . $interview_year. ' Interview');
+                                    }
+                                    else if($interview_month && $interview_year ) {
+                                        echo ($interview_month. ' ' . $interview_year. ' Interview');
+                                    }
+                                    else if($interview_year){
+                                        echo ($interview_year. ' Interview');
+                                    }
 
+                                }
+                            }?>
+
+                            <!-- Interviewer -->
+
+                            <?php 
+                            if($interviewer){
+                                echo("<div class='bold-heading'> Interviewer: ".$interviewer["post_title"]."</div>");
                             }
-                        }?>
-
-                        <!-- Interviewer -->
-
-                        <?php 
-                        if($interviewer){
-                            echo("<span class='bold-heading'> Interviewer: </span>");
-                            echo($interviewer["post_title"]);
-                        }
-                        ?>
+                            ?>
+                        </div>
 
                         <!-- Interview information -->
                         <?php if($link_to_box_folder){
@@ -96,21 +96,22 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                     </div>
 
                     <div class="interviewee-image">
-                        <?php if ($picture) {
-                            echo("<img style='max-width: 320px' src='$picture[guid]'/>");
-                        }?>
-                    
-                        
+                        <div class="picture">
+                            <?php if ($picture) {
+                                echo("<img style='max-width: 250px; height: 250px;'  src='$picture[guid]'/>");
+                            }?>
+                        </div>
+                        <div class="audio">
                         <!-- Audio info -->
-                        <?php if($audio_link) { 
-                            echo("<audio controls>");
-                            echo("<source src='$audio_link' type='audio/mpeg'>");
-                            echo("<source src='$audio_link' type='audio/x-m4a'>");
-                            echo("<source src='$audio_link' type='audio/aac'>");
-                            echo("</audio>");
-                        } 
-                        ?>
-
+                            <?php if($audio_link) { 
+                                echo("<audio controls>");
+                                echo("<source src='$audio_link' type='audio/mpeg'>");
+                                echo("<source src='$audio_link' type='audio/x-m4a'>");
+                                echo("<source src='$audio_link' type='audio/aac'>");
+                                echo("</audio>");
+                            } 
+                            ?>
+                        </div>
                         <!-- Transcript AND translation files -->
                         <div class="transcipt-translation">
                             <?php 
