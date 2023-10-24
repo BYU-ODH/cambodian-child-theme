@@ -149,23 +149,51 @@ if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
 	$custom_tax_mb = new WDS_Taxonomy_Radio( 'gender' );
  }
 
-function english_translation() {
+ function english_translation() {
     
-	$params = array(
-		'orderby' => 't.post_title ASC',    
-		'limit' => -1,
-		'where' => 'translation_file.meta_value != ""'
-		);
-	
-	$mypod = pods( 'interview' , $params);
+    $params = array(
+        'orderby' => 't.post_title ASC',    
+        'limit' => -1,
+        'where' => 'translation_file.meta_value != ""'
+    );
+    
+    $interviewee_params = array(
+        'orderby' => 't.post_title ASC',    
+        'limit' => -1,
+    );
 
-	while ( $mypod -> fetch() ) {
-		$id = $mypod -> field('id');
-		$permalink = get_permalink($id);
-        echo '<li class="translated no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a>' . '</li>';
-    }   
+    $mypod = pods( 'interview' , $params);
+
+    $cards = ''; // Initialize an empty string to store card HTML
+
+    while ($mypod->fetch()) {
+        $id = $mypod->field('id');
+        $permalink = get_permalink($id);
+        $interviewee = $mypod->field('interviewee');
+
+        $picture = pods('interviewee', $interviewee['ID'])->field('picture');
+        $picture_Id = !empty($picture['guid']) ? $picture['guid'] : 'https://humstaging.byu.edu/cambodianoralhistories/wp-content/uploads/2023/02/Untitled_Artwork-4-copy-3.jpg';
+        $post_title = $interviewee['post_title']; 
+
+        // Create the card HTML
+        $card = '
+            <div class="interview-card">
+                <div class="interviewee-picture">
+                    <a href="' . $permalink . '"><img src="' . $picture_Id . '" alt="' . $post_title . '"></a>
+                </div>
+                <div class="interviewee-info">
+                    <a href="' . $permalink . '"><h2>' . $post_title . '</h2></a>
+                </div>
+            </div>
+        ';
+
+        $cards .= $card; // Append the card HTML to the cards string
+    }
+
+    return $cards; // Return the generated cards HTML
 }
 add_shortcode('english', 'english_translation');
+
 
 function video_interview() {
     

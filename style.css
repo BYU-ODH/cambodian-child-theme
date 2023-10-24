@@ -1,4 +1,4 @@
-/*
+=/*
 Theme Name: Septera-COHP
 Theme URI: github
 Template Theme URI: http://www.cryoutcreations.eu/wordpress-themes/septera
@@ -371,5 +371,28 @@ list-style-type: none;
 font-weight: 400;
 }
 .Interview {
-    margin: 0px;
+    font-size: 2em;
+}
+
+.audio {
+    padding-bottom: 1vh;
+}
+
+.interview-card {
+    /* border: 1px solid #ddd;
+    border-radius: 5px; */
+    display:inline;
+}
+
+/* Adjust the styles as needed for your design */
+.interviewee-picture img {
+    max-width: 100%;
+    height: auto;
+}
+.interviewee-info h2 {
+    padding-top: 60px;
+}
+
+#primary  {
+    width:0px;
 }
