@@ -96,11 +96,19 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                     </div>
 
                     <div class="interviewee-image">
-                        <div class="picture">
-                            <?php if ($picture) {
-                                echo("<img style='max-width: 250px; height: 250px;'  src='$picture[guid]'/>");
-                            }?>
-                        </div>
+                    <div class="content">
+                        <?php if (!empty($video_link)) { ?>
+                            <div class="video">
+                                <iframe width="420" height="315" src="<?php echo $video_link; ?>" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        <?php } else if (!empty($picture)) { ?>
+                            <div class="picture">
+                                <img style="max-width: 250px; height: 250px;" src="<?php echo $picture['guid']; ?>" />
+                            </div>
+                        <?php } ?>
+                    </div>
+
+
                         <div class="audio">
                         <!-- Audio info -->
                             <?php if($audio_link) { 
@@ -121,7 +129,7 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                             }
 
                             if($translation_file) {
-                                echo("<a href='$translation_file'>img src='https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/07/EnglishFile-1.png' style='max-width: 100px'/></a>");
+                                echo("<a href='$translation_file'><img src='https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/07/EnglishFile-1.png' style='max-width: 100px'/></a>");
                             
                             }
 
