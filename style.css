@@ -1,4 +1,4 @@
-/*
+=/*
 Theme Name: Septera-COHP
 Theme URI: github
 Template Theme URI: http://www.cryoutcreations.eu/wordpress-themes/septera
@@ -371,5 +371,50 @@ list-style-type: none;
 font-weight: 400;
 }
 .Interview {
-    margin: 0px;
+    font-size: 2em;
+}
+
+.audio {
+    padding-bottom: 1vh;
+}
+
+.interviewee-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a 3x3 grid */
+    gap: 5px; /* Add some spacing between cards */
+}
+
+.interviewee-card {
+    /* background-color: #f5f5f5; */
+    padding: 30px;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    border-radius: 10px;
+}
+
+.interviewee-card img {
+    width: 100%; 
+    height: 400px; 
+}
+
+.interviewee-card h2 {
+    margin-top: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .interviewee-cards-container {
+        grid-template-columns: repeat(1, 1fr); /* Change to a single column layout for screens <= 768px */
+    }
+}
+
+#primary  {
+    width:0px;
+}
+.interviewee-card a {
+    color:black;
+}
+
+.interviewee-card a:hover {
+    color:#d11710;
 }

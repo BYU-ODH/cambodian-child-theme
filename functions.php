@@ -149,24 +149,6 @@ if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
 	$custom_tax_mb = new WDS_Taxonomy_Radio( 'gender' );
  }
 
-function english_translation() {
-    
-	$params = array(
-		'orderby' => 't.post_title ASC',    
-		'limit' => -1,
-		'where' => 'translation_file.meta_value != ""'
-		);
-	
-	$mypod = pods( 'interview' , $params);
-
-	while ( $mypod -> fetch() ) {
-		$id = $mypod -> field('id');
-		$permalink = get_permalink($id);
-        echo '<li class="translated no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a>' . '</li>';
-    }   
-}
-add_shortcode('english', 'english_translation');
-
 function video_interview() {
     
 	$params = array(
@@ -176,9 +158,9 @@ function video_interview() {
 		);
 	
 	$mypod = pods( 'interview' , $params);
-
 	while ( $mypod -> fetch() ) {
-		$id = $mypod -> field('id');
+		$intervieweepod = $mypod-> field('interviewee');
+		$id = $intervieweepod["ID"];
 		$permalink = get_permalink($id);
         echo '<li class="video no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('interviewee') . '</a>' . '</li>';
     }   
