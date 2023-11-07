@@ -85,6 +85,16 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                 echo("<div class='bold-heading'> Interviewer: ".$interviewer["post_title"]."</div>");
                             }
                             ?>
+                             <?php
+                                if (isset($story_included) && is_array($story_included) && !empty($story_included)) {
+                                    echo '<div class="interview-topics-section">Interview Topics:</div>';
+                                    foreach ($story_included as $topic) {
+                                        $topic_link = get_permalink($topic['ID']);
+                                        $topic_title = $topic['post_title'];
+                                        echo "<a href='$topic_link'>$topic_title</a><br>";
+                                    }
+                                }
+                            ?>
                         </div>
 
                         <!-- Interview information -->

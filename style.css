@@ -418,3 +418,6 @@ font-weight: 400;
 .interviewee-card a:hover {
     color:#d11710;
 }
+.interview-topics-section {
+    font-weight: bold;
+}
