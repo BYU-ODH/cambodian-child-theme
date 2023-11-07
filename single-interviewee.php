@@ -86,8 +86,7 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                     $interviewer_link = get_permalink($interviewer['ID']);
                                     echo "<div class='bold-heading'>Interviewer:<a href='$interviewer_link'> " . $interviewer["post_title"] . "</a></div>";
                                 }
-                            ?>
-
+                            ?>   
                         </div>
 
                         <!-- Interview information -->
