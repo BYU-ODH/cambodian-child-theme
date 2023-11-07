@@ -393,8 +393,8 @@ font-weight: 400;
 }
 
 .interviewee-card img {
-    width: 100%; 
-    height: 400px; 
+    width: 60%; 
+    height: auto; 
 }
 
 .interviewee-card h2 {

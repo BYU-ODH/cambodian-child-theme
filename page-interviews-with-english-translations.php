@@ -24,7 +24,7 @@ function english_translation() {
         $interviewee = $mypod->field('interviewee');
 
         $picture = pods('interviewee', $interviewee['ID'])->field('picture');
-        $picture_Id = !empty($picture['guid']) ? $picture['guid'] : 'https://humstaging.byu.edu/cambodianoralhistories/wp-content/uploads/2023/02/Untitled_Artwork-4-copy-3.jpg';
+        $picture_Id = !empty($picture['guid']) ? $picture['guid'] : 'http://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/05/No-Image.png';
         $post_title = $interviewee['post_title']; 
 
         // Create the card HTML
