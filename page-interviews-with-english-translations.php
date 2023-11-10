@@ -25,7 +25,7 @@ function english_translation() {
         <div class="interviewee-card">
         <a class="link" href="' . $permalink . '">
         <img src="' . $picture_Id . '" alt="' . $post_title . '">
-        <h2>' . $post_title . '</h2>
+        <h2 class="card_title">' . $post_title . '</h2>
         </a>
         </div>
         ';
@@ -37,14 +37,16 @@ function english_translation() {
 }
 add_shortcode('english', 'english_translation');
 ?>
+<div class="paginations">
+    <?php echo $mypod->pagination( array( 'type' => 'paginate' ) );?>
+</div>
 
 <div class="interviewee-cards-container">
-    
-    <?php 
-        echo $mypod->pagination( array( 'type' => 'paginate' ) );
-        echo do_shortcode('[english]'); 
-        echo $mypod->pagination( array( 'type' => 'paginate' ) );
-    ?>
+    <?php echo do_shortcode('[english]'); ?>
+</div>
+
+<div class="paginations">
+    <?php echo $mypod->pagination( array( 'type' => 'paginate' ) ); ?>
 </div>
 
 <?php get_footer();?>
