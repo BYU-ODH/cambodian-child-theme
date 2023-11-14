@@ -17,6 +17,7 @@ $interview_month = $interview_pod -> field("interview_month");
 $interview_year = $interview_pod -> field("interview_year");
 $interview_day = $interview_pod -> field("interview_day");
 $interviewer = $interview_pod -> field("interviewer"); // echo($interviewer["post_title"]) Have to grab post_title
+$ID_Interviewer = $interviewer['ID'];
 $link_to_box_folder = $interview_pod -> field("link_to_box_folder");
 $video_link = $interview_pod -> field("video_link");
 $audio_link = $interview_pod -> field("audio_link");
@@ -80,11 +81,12 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
 
                             <!-- Interviewer -->
 
-                            <?php 
-                            if($interviewer){
-                                echo("<div class='bold-heading'> Interviewer: ".$interviewer["post_title"]."</div>");
-                            }
-                            ?>
+                            <?php
+                                if ($interviewer) {
+                                    $interviewer_link = get_permalink($interviewer['ID']);
+                                    echo "<div class='bold-heading'>Interviewer:<a href='$interviewer_link'> " . $interviewer["post_title"] . "</a></div>";
+                                }
+                            ?>   
                         </div>
 
                         <!-- Interview information -->
