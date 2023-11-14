@@ -81,11 +81,13 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
 
                             <!-- Interviewer -->
 
-                            <?php 
-                            if($interviewer){
-                                echo("<div class='bold-heading'> Interviewer: ".$interviewer["post_title"]."</div>");
-                            }
-                            ?>
+                           
+                            <?php
+                                if ($interviewer) {
+                                    $interviewer_link = get_permalink($interviewer['ID']);
+                                    echo "<div class='bold-heading'>Interviewer:<a href='$interviewer_link'> " . $interviewer["post_title"] . "</a></div>";
+                                }
+                            ?>   
                             <?php
                                 if (isset($story_included) && is_array($story_included) && !empty($story_included)) {
                                     echo '<div class="interview-topics-section">Interview Topics:</div>';
