@@ -3,7 +3,7 @@ get_header();
 
 $params = array(
     'orderby' => 't.post_title ASC',    
-    'limit' => 10,
+    'limit' => 9,
     'where' => 'translation_file.meta_value != ""'
 );
 
@@ -12,8 +12,9 @@ function english_translation() {
     global $mypod;
     $cards = ''; // Initialize an empty string to store card HTML
     while ($mypod->fetch()) {
-        $id = $mypod->field('id');
-        $permalink = get_permalink($id);
+        $intervieweepod = $mypod-> field('interviewee');
+		$id = $intervieweepod["ID"];
+		$permalink = get_permalink($id);
         $interviewee = $mypod->field('interviewee');
         
         $picture = pods('interviewee', $interviewee['ID'])->field('picture');
