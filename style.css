@@ -393,8 +393,8 @@ font-weight: 400;
 }
 
 .interviewee-card img {
-    width: 100%; 
-    height: 400px; 
+    width: 60%; 
+    height: auto;
 }
 
 .interviewee-card h2 {
@@ -402,7 +402,7 @@ font-weight: 400;
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .interviewee-cards-container {
         grid-template-columns: repeat(1, 1fr); /* Change to a single column layout for screens <= 768px */
     }
@@ -418,6 +418,17 @@ font-weight: 400;
 .interviewee-card a:hover {
     color:#d11710;
 }
+.card_title {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.paginations {
+    text-align: center;
+    margin: 15px;
+    font-size: 20px;
+}
+
 .interview-topics-section {
     font-weight: bold;
 }
