@@ -54,10 +54,14 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                 echo("<div class='bold-heading'>Birth province: "."<a href='$birth_location_province[guid]'>".$birth_location_province['post_title']."</a></div>");
                             } ?>
                             <!-- Birth location Village -->
-                            <?php if ($birth_location_village) {
-                                echo("<div class='bold-heading'>Birth village: </div>");
-                                echo("<a href='$birth_location_village[0][guid]'>".$birth_location_village['post_title']."</a></p>");
-                            }?>
+                            <?php
+                                if ($birth_location_village) {
+                                    $village_permalink = get_permalink($birth_location_village['ID']);
+                                    
+                                    echo "<div><strong>Birth village: </strong><a href='$village_permalink'>" . $birth_location_village['post_title'] . "</a></div>";
+                                }
+                            ?>
+
                         </div> 
                         
                         <div>        
