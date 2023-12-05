@@ -40,18 +40,18 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                     <div class="interviewee-text">  
                         <div>
                             <?php if ($birth_year && $birth_month && $birth_date) {
-                                    echo("<div class='bold-heading'>Birthday: ".$birth_date . ' ' . $birth_month . ' ' . $birth_year."</div>");
+                                    echo("<div><strong>Birthday: </strong>".$birth_date . ' ' . $birth_month . ' ' . $birth_year."</div>");
                                 } 
                                 else if ($birth_month && $birth_year) {
-                                    echo("<div class='bold-heading'>Birth month: ".$birth_month . ' ' . $birth_year."</div>");
+                                    echo("<div>Birth month: ".$birth_month . ' ' . $birth_year."</div>");
                                 }
                                 else if ($birth_year){
-                                    echo("<div class='bold-heading'>Birth year: ".$birth_year."</div>");
+                                    echo("<div>Birth year: ".$birth_year."</div>");
                                 }
                             ?>
                             <!-- Birth Location -->
                             <?php if ($birth_location_province) {
-                                echo("<div class='bold-heading'>Birth province: "."<a href='$birth_location_province[guid]'>".$birth_location_province['post_title']."</a></div>");
+                                echo("<div><strong>Birth province: </strong>"."<a href='$birth_location_province[guid]'>".$birth_location_province['post_title']."</a></div>");
                             } ?>
                             <!-- Birth location Village -->
                             <?php
@@ -61,7 +61,6 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                     echo "<div><strong>Birth village: </strong><a href='$village_permalink'>" . $birth_location_village['post_title'] . "</a></div>";
                                 }
                             ?>
-
                         </div> 
                         
                         <div>        
@@ -89,7 +88,7 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                             <?php
                                 if ($interviewer) {
                                     $interviewer_link = get_permalink($interviewer['ID']);
-                                    echo "<div>Interviewer:<a href='$interviewer_link'> " . $interviewer["post_title"] . "</a></div>";
+                                    echo "<div><strong>Interviewer:</strong><a href='$interviewer_link'> " . $interviewer["post_title"] . "</a></div>";
                                 }
 
                                 if (isset($story_included) && is_array($story_included) && !empty($story_included)) {
