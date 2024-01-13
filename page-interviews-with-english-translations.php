@@ -2,7 +2,7 @@
 get_header();
 
 $params = array(
-    'orderby' => 't.post_title ASC',    
+    'orderby' => 'modified DESC',
     'limit' => 9,
     'where' => 'translation_file.meta_value != ""'
 );
