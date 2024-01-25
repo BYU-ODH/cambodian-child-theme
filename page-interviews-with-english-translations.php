@@ -2,7 +2,7 @@
 get_header();
 
 $params = array(
-    'orderby' => 't.post_title ASC',    
+    'orderby' => 'modified DESC',
     'limit' => 9,
     'where' => 'translation_file.meta_value != ""'
 );
@@ -13,25 +13,26 @@ function english_translation() {
     $cards = ''; // Initialize an empty string to store card HTML
     while ($mypod->fetch()) {
         $intervieweepod = $mypod-> field('interviewee');
-		$id = $intervieweepod["ID"];
-		$permalink = get_permalink($id);
-        $interviewee = $mypod->field('interviewee');
+        $id = $intervieweepod["ID"] ?? NULL;    
+        if (!is_null($id)) {
+            $permalink = get_permalink($id);
+            $picture = pods('interviewee', $id)->field('picture');
+            $picture_Id = !empty($picture['guid']) ? $picture['guid'] : 'http://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/05/No-Image.png';
+            $post_title = $intervieweepod['post_title']; 
+            
+            // Create the card HTML
+            $card = '
+            <div class="interviewee-card">
+            <a class="link" href="' . $permalink . '">
+            <img src="' . $picture_Id . '" alt="' . $post_title . '">
+            <h2 class="card_title">' . $post_title . '</h2>
+            </a>
+            </div>
+            ';
+            
+            $cards .= $card; // Append the card HTML to the cards string
+        }
         
-        $picture = pods('interviewee', $interviewee['ID'])->field('picture');
-        $picture_Id = !empty($picture['guid']) ? $picture['guid'] : 'http://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/05/No-Image.png';
-        $post_title = $interviewee['post_title']; 
-        
-        // Create the card HTML
-        $card = '
-        <div class="interviewee-card">
-        <a class="link" href="' . $permalink . '">
-        <img src="' . $picture_Id . '" alt="' . $post_title . '">
-        <h2 class="card_title">' . $post_title . '</h2>
-        </a>
-        </div>
-        ';
-        
-        $cards .= $card; // Append the card HTML to the cards string
     }
     
     return $cards; // Return the generated cards HTML
