@@ -121,7 +121,7 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                 echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='{$picture['guid']}' /></div>";
                             } else {
                                 // Specify the path to your placeholder image
-                                $placeholderImage = 'https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/05/No-Image.png';
+                                $placeholderImage = 'Images/No-Image.png';
                                 echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='{$placeholderImage}' /></div>";
                             }
                             ?>
