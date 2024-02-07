@@ -482,17 +482,33 @@ ul#prime_nav {
 }
 .interviewee-details {
     display: flex;
-    align-items: flex-start; /* Align items to the start of the flex container */
+    align-items: flex-start; /* Keeps alignment at the start */
+    flex-direction: row; /* Aligns items in a row instead of a column */
 }
 
+.interviewee-image {
+    order: 1; /* Image/Video appears first */
+    flex-basis: 250px; /* Adjust this value based on your preference */
+    /* If you want the image to not grow or shrink, you can also add */
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.birth-details, .interviews-grid {
+    order: 2; /* Details appear second */
+    flex-grow: 1; /* Allows the details section to fill the remaining space */
+    padding-left: 20px; /* Adds some spacing between the image and the details */
+}
 
 .interviewee-details > div:first-child {
     flex-grow: 1; 
     /* margin-right: 10px; Adds some space between the details and the image */
 }
-.birthday {
-    display: inline;
-}
-.birth-month {
-    display: inline;
+
+@media (max-width: 850px) {
+    .interviewee-details {
+        flex-direction: column; /* Stack items in a column on smaller screens */
+    }
+    .birth-details, .interviews-grid {
+        padding-left: 0; /* Remove the left padding on smaller screens */
+    }
 }
