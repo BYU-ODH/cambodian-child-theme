@@ -114,15 +114,17 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
 
                     <div class="interviewee-image">
                     <div class="content">
-                        <?php if (!empty($video_link)) { ?>
-                            <div class="video">
-                                <iframe width="420" height="315" src="<?php echo $video_link; ?>" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        <?php } else if (!empty($picture)) { ?>
-                            <div class="picture">
-                                <img style="max-width: 250px; height: 250px;" src="<?php echo $picture['guid']; ?>" />
-                            </div>
-                        <?php } ?>
+                    <?php 
+                            if (!empty($video_link)) {
+                                echo "<div class='video'><iframe width='420' height='315' src='$video_link' frameborder='0' allowfullscreen></iframe></div>";
+                            } else if (!empty($picture)) {
+                                echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='{$picture['guid']}' /></div>";
+                            } else {
+                                // Specify the path to your placeholder image
+                                $placeholderImage =  get_theme_file_uri("/Images/No-Image.png");
+                                echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='$placeholderImage' /></div>";
+                            }
+                            ?>
                     </div>
 
 
