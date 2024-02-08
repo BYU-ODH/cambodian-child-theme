@@ -451,7 +451,7 @@ ul#prime_nav {
 
 .interviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     /* gap:80px; */
     /* margin-top: 20px; */
     /* text-align: center; */
@@ -459,7 +459,6 @@ ul#prime_nav {
 
 .interview-item {
     /* border: 1px solid #ccc; */
-    padding: 15px;
     border-radius: 10px;
 }
 
@@ -484,6 +483,7 @@ ul#prime_nav {
     display: flex;
     align-items: flex-start; /* Keeps alignment at the start */
     flex-direction: row; /* Aligns items in a row instead of a column */
+    padding-bottom: 20px;
 }
 
 .interviewee-image {
@@ -493,10 +493,10 @@ ul#prime_nav {
     flex-grow: 0;
     flex-shrink: 0;
 }
-.birth-details, .interviews-grid {
+.birth-details {
     order: 2; /* Details appear second */
     flex-grow: 1; /* Allows the details section to fill the remaining space */
-    padding-left: 20px; /* Adds some spacing between the image and the details */
+    padding-left: 50px; /* Adds some spacing between the image and the details */
 }
 
 .interviewee-details > div:first-child {
