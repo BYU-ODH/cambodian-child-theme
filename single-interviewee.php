@@ -70,13 +70,13 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                 echo("<span class='bold-heading'>Date: </span>");
                                 foreach ($participated_in_interview as $interview) {
                                     if ($interview_year && $interview_month && $interview_day) {
-                                        echo($interview_day. ' ' . $interview_month. ' ' . $interview_year. ' Interview');
+                                        echo($interview_day. ' ' . $interview_month. ' ' . $interview_year. '');
                                     }
                                     else if($interview_month && $interview_year ) {
-                                        echo ($interview_month. ' ' . $interview_year. ' Interview');
+                                        echo ($interview_month. ' ' . $interview_year. '');
                                     }
                                     else if($interview_year){
-                                        echo ($interview_year. ' Interview');
+                                        echo ($interview_year. '');
                                     }
 
                                 }
