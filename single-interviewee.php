@@ -64,22 +64,9 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                         </div> 
                         
                         <div>        
-                            <h4 class="Interview">Interview(s)</h4>
+                        
                         <!-- Interview Date -->
-                            <?php if ($participated_in_interview) {
-                                echo("<span class='bold-heading'>Date: </span>");
-                                foreach ($participated_in_interview as $interview) {
-                                    if ($interview_year && $interview_month && $interview_day) {
-                                        echo($interview_day. ' ' . $interview_month. ' ' . $interview_year. '');
-                                    }
-                                    else if($interview_month && $interview_year ) {
-                                        echo ($interview_month. ' ' . $interview_year. '');
-                                    }
-                                    else if($interview_year){
-                                        echo ($interview_year. '');
-                                    }
-                                }
-                            }
+                            <?php 
 
                             if ($birth_location_village) {
                                 $village_permalink = get_permalink($birth_location_village['ID']);
@@ -171,50 +158,6 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                             }
                         }
                         ?>
-                    </div>
-
-                    <div class="interviewee-image">
-                    <div class="content">
-                    <?php 
-                            if (!empty($video_link)) {
-                                echo "<div class='video'><iframe width='420' height='315' src='$video_link' frameborder='0' allowfullscreen></iframe></div>";
-                            } else if (!empty($picture)) {
-                                echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='{$picture['guid']}' /></div>";
-                            } else {
-                                // Specify the path to your placeholder image
-                                $placeholderImage =  get_theme_file_uri("/Images/No-Image.png");
-                                echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='$placeholderImage' /></div>";
-                            }
-                            ?>
-                    </div>
-
-
-                        <div class="audio">
-                        <!-- Audio info -->
-                            <?php if($audio_link) { 
-                                echo("<audio controls>");
-                                echo("<source src='$audio_link' type='audio/mpeg'>");
-                                echo("<source src='$audio_link' type='audio/x-m4a'>");
-                                echo("<source src='$audio_link' type='audio/aac'>");
-                                echo("</audio>");
-                            } 
-                            ?>
-                        </div>
-                        <!-- Transcript AND translation files -->
-                        <div class="transcipt-translation">
-                            <?php 
-                            if($transcript_file) {
-                                
-                                echo("<a href='$transcript_file'><img src='https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/08/KhmerFile-1.png' style='max-width: 100px'/></a>");
-                            }
-
-                            if($translation_file) {
-                                echo("<a href='$translation_file'><img src='https://cambodianoralhistoryproject.byu.edu/wp-content/uploads/2019/07/EnglishFile-1.png' style='max-width: 100px'/></a>");
-                            
-                            }
-
-                            ?>
-                        </div>
                     </div>
                 </div>
                     <!-- Navigation -->
