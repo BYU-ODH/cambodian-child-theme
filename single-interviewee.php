@@ -39,29 +39,36 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
 
                 <div class="individual-interviewee">
                     <div class="interviewee-details">
-                        <div class="birth-details">
-                            <!-- Birth Details -->
-                            <?php
-                            if ($birth_year && $birth_month && $birth_date) {
-                                echo("<div class='birthday'><strong>Birthday: </strong>".$birth_date . ' ' . $birth_month . ' ' . $birth_year."</div>");
-                            } else if ($birth_month && $birth_year) {
-                                echo("<div class='birth-month'>Birth month: ".$birth_month . ' ' . $birth_year."</div>");
-                            } else if ($birth_year){
-                                echo("<div>Birth year: ".$birth_year."</div>");
-                            }
-
-                            if ($birth_location_province) {
-                                echo("<div><strong>Birth province: </strong>"."<a href='$birth_location_province[guid]'>".$birth_location_province['post_title']."</a></div>");
-                            } ?>
-                            <!-- Birth location Village -->
-                            <?php
-                                if ($birth_location_village) {
-                                    $village_permalink = get_permalink($birth_location_village['ID']);
-                                    
-                                    echo "<div><strong>Birth village: </strong><a href='$village_permalink'>" . $birth_location_village['post_title'] . "</a></div>";
+                    <div class="interviewee-image">
+                        <?php 
+                        if (!empty($picture)) {
+                            echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='{$picture['guid']}' /></div>";
+                        }
+                        ?>
+                    </div>
+                            <div class="birth-details">
+                                <!-- Birth Details -->
+                                <?php
+                                if ($birth_year && $birth_month && $birth_date) {
+                                    echo("<div class='birthday'><strong>Birthday: </strong>".$birth_date . ' ' . $birth_month . ' ' . $birth_year."</div>");
+                                } else if ($birth_month && $birth_year) {
+                                    echo("<div class='birth-month'>Birth month: ".$birth_month . ' ' . $birth_year."</div>");
+                                } else if ($birth_year){
+                                    echo("<div>Birth year: ".$birth_year."</div>");
                                 }
-                            ?>
-                        </div> 
+
+                                if ($birth_location_province) {
+                                    echo("<div><strong>Birth province: </strong>"."<a href='$birth_location_province[guid]'>".$birth_location_province['post_title']."</a></div>");
+                                } ?>
+                                <!-- Birth location Village -->
+                                <?php
+                                    if ($birth_location_village) {
+                                        $village_permalink = get_permalink($birth_location_village['ID']);
+                                        
+                                        echo "<div><strong>Birth village: </strong><a href='$village_permalink'>" . $birth_location_village['post_title'] . "</a></div>";
+                                    }
+                                ?>
+                            </div> 
                         
                         <div>        
                         
@@ -75,15 +82,7 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                             ?>
                         </div>
                         <!-- Interviewee Image or Video -->
-                        <div class="interviewee-image">
-                            <?php 
-                            if (!empty($video_link)) {
-                                echo "<div class='video'><iframe width='420' height='315' src='$video_link' frameborder='0' allowfullscreen></iframe></div>";
-                            } else if (!empty($picture)) {
-                                echo "<div class='picture'><img style='max-width: 250px; height: 250px;' src='{$picture['guid']}' /></div>";
-                            }
-                            ?>
-                        </div>
+                      
                     </div>
 
 
@@ -129,7 +128,13 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                         }
                                         ?>
                                     </div>
-
+                                    <div class="video">
+                                        <?php 
+                                            if (!empty($video_link)) {
+                                            echo "<div class='video'><iframe width='420' height='315' src='$video_link' frameborder='0' allowfullscreen></iframe></div>";
+                                            } 
+                                        ?>
+                                     </div>
                                     <!-- Interview Media (Audio) -->
                                     <div class="interview-media">
                                         <?php
@@ -153,6 +158,14 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                         }
                                         ?>
                                     </div>
+
+                                    <div class="all-interview-material">
+                                        <?php
+                                        if ($link_to_box_folder) {
+                                            echo "<a href='$link_to_box_folder'>All interview material</a>";
+                                        }
+                                        ?>
+                                    </div>                                
                                 </div>
                                 <?php
                             }
