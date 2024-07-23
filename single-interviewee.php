@@ -162,7 +162,7 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
                                     <div class="all-interview-material">
                                         <?php
                                         if ($link_to_box_folder) {
-                                            echo "<a href='$link_to_box_folder'>All interview materials</a>";
+                                            echo "<a href='$link_to_box_folder'>All Interview Materials</a>";
                                         }
                                         ?>
                                     </div>                                
