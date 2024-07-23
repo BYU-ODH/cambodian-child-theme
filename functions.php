@@ -12,7 +12,8 @@
     }
     add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
-		  
+	ini_set('display_errors', 0); 
+	ini_set('display_startup_errors',0);  
 /* radio button and default to unknown */
 if ( !class_exists( 'WDS_Taxonomy_Radio' ) ) {
 	/**
