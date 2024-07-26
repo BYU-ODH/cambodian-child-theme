@@ -171,7 +171,24 @@ div.entry-content a:hover {
 
 @media only screen and (min-width: 1024px) {
     .interviewee-directory {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 4fr; /* First column takes 1 part, second column takes 2 parts */
+        gap: 10px; /* Optional: Space between items */
+        justify-items: start;
+    }
+    .filters {
+        grid-column: 1 / 2; /* Place in the first column */
+        grid-row: 1 / 2;    /* Place in the first row */
+    }
+    
+    .interview-list {
+        grid-column: 2 / 3; /* Place in the second column */
+        grid-row: 1 / 2;    /* Place in the first row */
+    }
+    
+    .facetwp-facet.facetwp-facet-pagination.facetwp-type-pager {
+        grid-column: 2 / 3; /* Align with the second column */
+        grid-row: 2 / 3;    /* Place below the interview-list item */
     }
 }
 
