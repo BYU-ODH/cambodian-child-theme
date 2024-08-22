@@ -547,3 +547,7 @@ background-color: #333;  /* Modern Browsers */
 margin-left: 2rem;
 margin-right: 2rem;
 }
+
+#lp-posts, #lp-page {
+    padding: 0px;
+}
