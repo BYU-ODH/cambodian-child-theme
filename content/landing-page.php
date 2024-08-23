@@ -7,7 +7,7 @@
 septera_lpslider();
 septera_lpblocks();
 ?>
-<h3 class="storesHeader">RECENT STORIES</h3>
+<h3 class="storesHeader">RECENT NEWS</h3>
 <hr class="hr"/>
 <?php
 septera_lptext('one');
