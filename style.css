@@ -551,3 +551,23 @@ ul#prime_nav {
         padding-left: 0; /* Remove the left padding on smaller screens */
     }
 }
+
+/* LANDING PAGE  Styles*/
+
+.storesHeader {
+    text-align: center;
+}
+
+.hr {
+border: none;
+height: 2px;
+/* Set the hr color */
+color: #333;  /* old IE */
+background-color: #333;  /* Modern Browsers */
+margin-left: 2rem;
+margin-right: 2rem;
+}
+
+#lp-posts, #lp-page {
+    padding: 0px;
+}
