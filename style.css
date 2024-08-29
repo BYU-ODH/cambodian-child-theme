@@ -63,6 +63,9 @@ i.icon-menu {
     text-shadow: 5px 5px 8px #000;
     margin-top: 3.5em;
 }
+.lp-staticslider .staticslider-caption, .seriousslider.seriousslider-theme .seriousslider-caption {
+    top:70%;
+}
 
 a.staticslider-button:nth-child(2n+1) {
     color: #474747;
