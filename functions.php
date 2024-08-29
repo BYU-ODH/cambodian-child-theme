@@ -200,4 +200,34 @@ function interview_topics() {
         echo '<li class="topic no-bullets">' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
     }   
 }
+
+
+function load_more_posts() {
+    $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
+    $posts_per_page = 9; // Number of posts to load each time
+
+    $args = [
+        'post_type' => 'interviewee',
+        'post_status' => 'publish',
+        'posts_per_page' => $posts_per_page,
+        'paged' => $paged,
+    ];
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post(); ?>
+            <div class="grid-item">
+                <?php echo pods('interviewee', get_the_ID())->template('Interviewee Directory'); ?>
+            </div>
+        <?php endwhile;
+    endif;
+
+    wp_reset_postdata();
+
+    die();
+}
+
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 add_shortcode('topics', 'interview_topics');
