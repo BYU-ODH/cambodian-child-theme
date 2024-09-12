@@ -476,8 +476,12 @@ ul#prime_nav {
 
 .main .entry-title {
     /* text-align: center; */
-    padding-left: 35%;
+    /* padding-left: 35%; */
     font-size: 10px;
+}
+
+.singular-title {
+    padding-left: 35%;
 }
 
 @media (max-width: 500px) {
