@@ -34,7 +34,7 @@ $story_included = $interview_pod -> field("story_included"); // $story_included[
     <main id="main" role="main" class="main">
         <article>
             <div class="article-inner"> 
-                <h1 class="entry-title singular-title"><?php the_title(); ?></h1>
+                <h1 class="title"><?php the_title(); ?></h1>
                 <div class="entry-meta aftertitle-meta"></div>
 
                 <div class="individual-interviewee">
