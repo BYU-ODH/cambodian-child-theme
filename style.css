@@ -584,3 +584,17 @@ margin-right: 2rem;
 #lp-posts, #lp-page {
     padding: 0px;
 }
+
+@media (max-width: 600px) {
+    .lp-staticslider .staticslider-caption-text {
+        font-size: 1.3em;
+    }
+    a.staticslider-button { 
+        height:3vh;
+        width: auto;
+        font-size: 5px;
+    }
+    div.staticslider-caption-buttons {
+        margin-bottom: 7vh;
+    }
+    }
