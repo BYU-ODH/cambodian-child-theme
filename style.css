@@ -598,3 +598,62 @@ margin-right: 2rem;
         margin-bottom: 7vh;
     }
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+        padding: 30px;
+    }
+    .interviewee-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .interviewee-picture {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 20px;
+    }
+    .interviewee-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius:12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h6 {
+        margin-top: 15px;
+        font-size: 1.2rem;
+    }
+    .page-titles {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+    }
+
+    /* Responsive breakpoints */
+    @media (min-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 1200px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .interviewee-picture {
+            max-width: 350px;
+        }
+    }
+
+    .Interviews {
+        display: none;
+    }
+
+    span > div.Interviews {
+        display:block;
+    }
