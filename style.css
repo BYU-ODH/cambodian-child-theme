@@ -598,3 +598,14 @@ margin-right: 2rem;
         margin-bottom: 7vh;
     }
     }
+
+@media (max-width: 720px) {
+    .lp-staticslider .lp-staticslider-image {
+        max-height: none !important;
+        position: static !important;
+        left: auto !important;
+        transform: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
